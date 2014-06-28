@@ -29,13 +29,12 @@
     \let\oldtitle\title
     \renewcommand{\title}[1]{\oldtitle{#1}\newcommand{\mythetitle}{#1}}
     \renewcommand{\maketitle}{%
-	{\centering \large \sffamily Standard Operating Procedure\par}
 	\hspace*{-0.7cm}\begin{tabular}{|c|p{2.5cm}p{10.0cm}|} \hline
-	    \multirow{5}{*}{\includegraphics[width=3cm]{unllogo.png}} & Project: & UNL SiLab Pixel Phase-I upgrade \\
+	    \multirow{3}{*}{\includegraphics[width=3cm]{unllogo.png}} & \multicolumn{2}{c|}{\centering \sffamily Standard Operating Procedure} \\
 	& SOP Number: & \thesopid \\
 	& Title: & {\bfseries \mythetitle} \\
-	& Revision: & \thesopversion \\
-	& Date: & \thedate \\ \hline
+CMS Pixel	& Revision: & \thesopversion \\
+Phase-I upgrade	& Date: & \thedate \\ \hline
 	    \end{tabular}
     }
 
