@@ -24,6 +24,7 @@
     \RequirePackage{multirow}
     \newcommand{\sopid}[1]{\newcommand{\thesopid}{#1}}
     \newcommand{\sopversion}[1]{\newcommand{\thesopversion}{#1}}
+    \newcommand{\sopabstract}[1]{\newcommand{\thesopabstract}{#1}}
     \newcommand{\approved}[1]{\newcommand{\theapproved}{#1}}
     % Ref: http://tex.stackexchange.com/questions/3988/titlesec-versus-titling-mangling-thetitle
     \let\oldtitle\title
@@ -36,6 +37,15 @@
 CMS Pixel	& Revision: & \thesopversion \\
 Phase-I upgrade	& Date: & \thedate \\ \hline
 	    \end{tabular}
+
+	\bigskip
+
+    \begin{abstract}\thesopabstract\end{abstract}
+
+	\bigskip
+
+    \tableofcontents
+    \newpage
     }
 
 % For "Page N of M"
