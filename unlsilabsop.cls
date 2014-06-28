@@ -12,6 +12,7 @@
 
 % Modifications to the section titles
 \RequirePackage{titlesec}
+\RequirePackage{graphicx}
 \renewcommand{\thesection}{\Roman{section}}
 \titleformat{\section}{\normalfont\bfseries}
   {\makebox[3em][l]{\thesection{}.}}{0pt}{}
@@ -27,8 +28,9 @@
     \let\oldtitle\title
     \renewcommand{\title}[1]{\oldtitle{#1}\newcommand{\mythetitle}{#1}}
     \renewcommand{\maketitle}{%
+	{\centering Standard Operating Procedure\par}
 	\begin{tabular}{|c|p{2in}|l|l|} \hline
-	    \multirow{3}{*}{logo} & \multicolumn{1}{p{2.5in}|}{\centering UNL SiLab Pixel Phase-I upgrade} & Date: \thedate & Number: \\ \cline{2-4}
+	    \multirow{3}{*}{\includegraphics[width=3cm]{unllogo.png}} & \multicolumn{1}{p{2.5in}|}{\centering UNL SiLab Pixel Phase-I upgrade} & Date: \thedate & Number: \\ \cline{2-4}
 	& \multicolumn{1}{p{2.5in}|}{\centering Standard Operating Procedure } & \multicolumn{2}{p{2.5in}|}{Title: \mythetitle} \\ \cline{2-4}
 	& Approved By: \theapproved & \multicolumn{2}{l|}{Revision \thesopversion Date: \quad / \quad / \quad} \\ \hline
 	    \end{tabular}
