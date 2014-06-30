@@ -13,6 +13,10 @@
 % Modifications to the section titles
 \RequirePackage{titlesec}
 \RequirePackage{graphicx}
+\RequirePackage{tocloft}% http://ctan.org/pkg/tocloft
+\setlength{\cftsecnumwidth}{4em}% Set length of number width in ToC for \subsection
+\setlength{\cftsubsecnumwidth}{4em}% Set length of number width in ToC for \subsection
+
 \renewcommand{\thesection}{\Roman{section}}
 \titleformat{\section}{\normalfont\bfseries}
   {\makebox[3em][l]{\thesection{}.}}{0pt}{}
