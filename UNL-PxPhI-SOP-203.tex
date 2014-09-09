@@ -1,4 +1,4 @@
-\documentclass[12pt]{unlsilabsop}
+\documentclass[10pt]{unlsilabsop}
 \title{IV test of bare modules}
 \date{July 18, 2014}
 \author{Frank Meier Aeschbacher}
@@ -11,28 +11,48 @@
 \maketitle
 
 \section{Scope}
+This test is used for characterizing bare modules prior to assembly. In routine, this is part of the entry inspection after receiving new bare modules from the supplier.
+
+This procedure shall not be used for fully assembled modules.
 
 \section{Purpose}
+The IV curve is a critical parameter to check for the sanity of the sensor.
 
-\section{Definitions}
+%\section{Definitions}
+%\begin{itemize}
+%\item \textbf{bla} Text
+%\end{itemize}
 
-\section{Responsibilities}
+%\section{Responsibilities}
 
 \section{Equipment}
 
-\begin{description}
-\item[Probe station] to hold the setup
-\item[Pico probe model 7] mounted on microspositioner, used for GND connection
-\item[Pico probe model 7A] mounted on micropositioner, used for HV connection
-\item[Probe tips] Model 7-125, one for each pico probe
-\item[Computer] Requires pXar installed
-\item[DTB] Connected to the computer through a USB cable. No need to connect anything else, DTB just required for pXar to work properly.
-\item[HV power supply] use Keithly model 2430, connected to the same computer through a USB to RS232 adapter
-\item[Connection box] to make proper connection between picoprobes and HV power supply
-\end{description}
+\begin{itemize}
+\item \textbf{Probe station} Jmicro JR-2745, to hold the setup
+\item \textbf{Micropositioner} Jmicro KRN-09S, magnetically hold on the probe station, 2 pieces
+\item \textbf{Pico probe model 7} mounted on microspositioner, used for GND connection
+\item \textbf{Pico probe model 7A} mounted on micropositioner, used for HV connection
+\item \textbf{Probe tips} Model 7-125, one for each pico probe
+\item \textbf{Computer} Requires pXar installed
+\item \textbf{DTB} Connected to the computer through a USB cable. No need to connect anything else, DTB just required for pXar to work properly.
+\item \textbf{HV power supply} Keithly model 2430, connected to the same computer through a USB to RS232 adapter
+\item \textbf{Connection box} to make proper connection between picoprobes and HV power supply
+\item \textbf{Dark box} custom made dark PVC box
+\end{itemize}
 
 \section{Setup}
 
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+\includegraphics[width=0.5\textwidth]{img/SensorProbePositions.png} &
+The image shows the areas on a sensor suitable for making an electrical contact in red.
+\end{tabular}
+
+\begin{tabular}{ll}
+Area & Connect to \\
+Probe 1 & Not used \\
+Probe 2 & Connect to HV \\
+Probe 3 & Connect to GND \\
+\end{tabular}
 
 \section{Procedures}
 
