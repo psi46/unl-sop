@@ -1,6 +1,6 @@
 \documentclass[10pt]{unlsilabsop}
 \title{IV test of bare modules}
-\date{July 18, 2014}
+\date{September 10, 2014}
 \author{Frank Meier Aeschbacher}
 \approved{Frank Meier Aeschbacher}
 \sopid{203}
@@ -40,7 +40,7 @@ The IV curve is a critical parameter to check for the sanity of the sensor.
 \item \textbf{Probe tips} Model 7-125, one for each pico probe
 \item \textbf{Computer} Requires pXar installed
 \item \textbf{DTB} Connected to the computer through a USB cable. No need to connect anything else, DTB just required for pXar to work properly.
-\item \textbf{HV power supply} Keithly model 2430, connected to the same computer through a USB to RS232 adapter
+\item \textbf{HV power supply} Keithly model 2410, connected to the same computer through a USB to RS232 adapter
 \item \textbf{Connection box} to make proper connection between picoprobes and HV power supply
 \item \textbf{Dark box} custom made dark PVC box
 \item \textbf{Vacuum chuck} custom made, used to release modules off the GelPak
@@ -67,11 +67,14 @@ Prepare the setup as shown in the image (TODO: add image)
 The image shows the areas on a sensor suitable for making an electrical contact in red.
 \end{tabular}
 
-\begin{tabular}{ll}
+\begin{tabular}{lc}
+\toprule
 Area & Connect to \\
+\midrule
 Probe 1 & Not used \\
-Probe 2 & Connect to HV \\
-Probe 3 & Connect to GND \\
+Probe 2 & HV \\
+Probe 3 & GND \\
+\bottomrule
 \end{tabular}
 \item By watching the probes under the microscope, make sure the probes touch the areas properly, especially the GND connection
 \item Cover the setup using the dark box

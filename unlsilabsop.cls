@@ -26,6 +26,7 @@
     % Modification of title block
     \RequirePackage{titling}
     \RequirePackage{multirow}
+    \RequirePackage{booktabs}
     \newcommand{\sopid}[1]{\newcommand{\thesopid}{#1}}
     \newcommand{\sopversion}[1]{\newcommand{\thesopversion}{#1}}
     \newcommand{\sopabstract}[1]{\newcommand{\thesopabstract}{#1}}
@@ -36,7 +37,7 @@
     \renewcommand{\maketitle}{%
 	\hspace*{-0.7cm}\begin{tabular}{|c|p{2.5cm}p{10.0cm}|} \hline
 	    \multirow{3}{*}{\includegraphics[width=2.5cm]{unllogo.png}} & \multicolumn{2}{c|}{\centering \sffamily Standard Operating Procedure} \\
-	& SOP Number: & \thesopid \\
+	& SOP No.: & \thesopid \\
 	& Title: & {\bfseries \mythetitle} \\
 CMS Pixel	& Revision: & \thesopversion \\
 Phase-I upgrade	& Date: & \thedate \\ \hline
@@ -68,7 +69,7 @@ Phase-I upgrade	& Date: & \thedate \\ \hline
 \fancyhf{}
 \fancyhead[R]{%
     \begin{tabular}{|c|c|c|} \hline %
-	SOP Number: & Revision: & Date: \\
+	SOP No.: & Revision: & Date: \\
 	\thesopid & \thesopversion & \thedate \\ \hline
 	\end{tabular}%
 }
