@@ -1,7 +1,7 @@
 \documentclass[12pt]{unlsilabsop}
 
 \title{Master SOP}
-\date{June 27, 2014}
+\date{September 11, 2014}
 \author{Frank Meier Aeschbacher}
 \approved{Frank Meier Aeschbacher}
 \sopid{000}
@@ -107,6 +107,18 @@ No. & Title & Comment \\
 
 %-------------------------------------------------------
 \section{Production life-cycle and critical control points}
+
+The standard workflow is shown in Fig.~\ref{fig:WorkflowProduction}. Any normal module fulfilling all quality criteria will follow the standard path. Module quality is tested along the production path. Every such test defines a critical control point. Modules failing the quality criteria will be judged for reworking or will be classified as bad.
+
+TODO: We will need either another SOP where we collect all acceptance criteria or we refer to some external document. We should not have those criteria inside the SOP that describe a test, as any change will trigger a new revision.
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=12.7cm]{img/WorkflowProduction.pdf}
+        \caption{Standard workflow for production of modules at UNL. Solid paths show the steps all modules will undertake. Dashed paths are optional steps, based on needs (reworking if quality criteria not matched) or additional tests (according to testing schemes. Critical control points are shown as circles. Numbers refer to SOP documents.).}
+        \label{fig:WorkflowProduction}
+    \end{center}
+\end{figure}
 
 %-------------------------------------------------------
 \section{Documentation of workflow, test results and maintenance operations}
