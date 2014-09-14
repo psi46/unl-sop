@@ -34,6 +34,9 @@ UNL batch No. | HDI S/N    | Special observations (observed damages, missed bond
 
 Total number of modules encapsulated in this run: ____
 
+Modules stored: [ ] on chuck
+                [ ] on module carriers, with flex cable attached: [ ] Yes  [ ] No
+
 Special observations:
 
 
