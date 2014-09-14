@@ -51,6 +51,12 @@ Documents are identified by a 3-digit number. The top-level document has the num
 \subsection{Versioning of documents}
 Any SOP document carries a revision number, consisting of the letter `v' followed by a number. `v0' identifies a draft document. Any document `v1' and above is effective as of the date printed.
 
+\subsection{Referencing documents}
+\begin{itemize}
+\item Cross-reference within SOP documents go as SOP~XXX, where XXX is the document number. This assumes always a reference to the latest version of that document. References to specific version are to be avoided.
+\item Referencing from external documents should use the full title and SOP number.
+\end{itemize}
+
 \subsection{List of documents}
 Table \ref{tbl:SOPlist} shows the planned documents. They do not need to be in place before this document becomes v1. A list of all current documents is to be maintained and made accessible to all people involved.
 
@@ -74,6 +80,7 @@ No. & Title & Comment \\
 001 & Access control & \\
 002 & Backup and recovery & \\
 003 & Protective measures & Personal protection, clean room rules, environmental protection \\
+004 & Storage of raw, intermediate and finished parts & \\
 \midrule
 101 & Deliveries of HDI & \\
 102 & Deliveries of BBM & \\
@@ -99,6 +106,8 @@ No. & Title & Comment \\
 305 & Vacuum supply & \\
 306 & Dry air supply & \\
 307 & Cold box & \\
+308 & HV power supply & \\
+309 & Storage cabinets & \\
 \bottomrule
 \end{tabular}
 }
@@ -122,9 +131,24 @@ TODO: We will need either another SOP where we collect all acceptance criteria o
 
 %-------------------------------------------------------
 \section{Documentation of workflow, test results and maintenance operations}
+Any action following procedures covered by this set of SOP need to be documented as follows:
+\begin{itemize}
+\item All activities need to be documented on the UNL logbook, which can be found at \url{http://t3-sl5.unl.edu:8175/SiLab_Logbook/}
+\end{itemize}
 
 %-------------------------------------------------------
 \section{Training}
+
+%-------------------------------------------------------
+\section{Resources}
+URL listed below may change over time and to not necessarily trigger a new version of this document. In case a link is broken, consult the TWiki page, which may have a newer link.
+\begin{itemize}
+\item TWiki page: \url{https://twiki.cern.ch/twiki/bin/view/CMS/UNLPixelPhaseI}
+
+Acts as start page to access documentation on the UNL pixel phase I activities.
+\item UNL logbook: \url{http://t3-sl5.unl.edu:8175/SiLab_Logbook/}
+\item Purdue sensor database: \url{http://www.physics.purdue.edu/cmsfpix/Submission_p/index.php}
+\end{itemize}
 
 \end{document}
 
