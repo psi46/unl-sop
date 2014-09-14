@@ -1,0 +1,101 @@
+\documentclass[12pt]{unlsilabsop}
+\title{Module assembly: Encapsulation of wirebonds}
+\date{September 14, 2014}
+\author{Frank Meier Aeschbacher}
+\approved{Frank Meier Aeschbacher}
+\sopid{105}
+\sopversion{v0}
+\sopabstract{Describes the procedures to encapsulate wirebonds of modules using the robotic gantry. The procedure takes place in the clean room.}
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------
+\section{Scope}
+This is a regular part in the manufacturing process of pixel modules at UNL.
+
+%------------------------------------------------------------------
+\section{Purpose}
+Wirebonds should receive protection by applying an encapsulant. This is the final manufaturing step.
+
+%------------------------------------------------------------------
+%>\section{Definitions}
+
+%------------------------------------------------------------------
+\section{Responsibilities}
+
+%------------------------------------------------------------------
+\section{Equipment}
+
+\begin{itemize}
+    \item Gantry
+    \item Nordson ESD dispenser (TODO: model no.)
+    \item Chucks equipped with carrier chucks for modules
+    \item Sylguard two-component encapsulant
+    \item Test tube to mix encapsulant
+    \item Disposable syringes for transferring the liquids (TODO: note size and source)
+    \item Disposable syringe for dispenser, Nordson ESD, part no.
+    \item Dispenser needle, Nordson ESD part no.
+    \item Centrifuge
+    \item Polyimide sheets, to cover chuck positions if not running a full batch of 4 modules
+    \item Felt tip marker, to write batch number on chuck
+    \item Curing oven
+\end{itemize}
+
+TODO: add image of setup. Make note that arrangement may vary as long as it matches the setup in the software
+
+%------------------------------------------------------------------
+\section{Procedure}
+
+The procedure below is good for encapsulation of a larger number of modules than chust the 4 of one chuck.
+\begin{enumerate}
+    \item Handle bare modules only with proper protection: ESD wristband, gloves, face mask.
+    \item Perform a readiness check of the gantry:
+    \begin{enumerate}
+	\item Test presence of vaccum on the gauge, record the pressure.
+	\item Test presence of compressed air by engaging the dispenser
+	\item Start LabView control software. Record version. TODO: note further checks
+    \end{enumerate}
+    \item Prepare encapsulant in lab outside the cleanroom:\label{enum:prepencapsulant}
+    \begin{enumerate}
+	\item Check expiration date of both ingredients. Replace if expired.
+	\item Record batch number and expiration date of encapsulant.
+	\item Take X\,mL of part A and Y\,mL of part B (TODO: state exact amounts) and mix in test tube
+	\item Gently shake test tube (TODO: Mention exact procedure) and transfer liquid to 
+	\item Fill another test tube with water
+	\item Place both tubes in centrifuge at opposite location to balance rotor.
+	\item Centrifuge for N\,min. Repeat until encapsulant shows no bubbles anymore.
+	\item Transfer syringe into cleanroom
+    \end{enumerate}
+    \item Attach tube to syringe and insert syringe into holder at gantry head.
+    \item Run the calibration procedure to determine the position of the needle tip.
+    \item Make a manual test deposit on a disposal surface. Make sure the lines look nice and show no interruptions from bubbles. If not, go back to step \ref{enum:prepencapsulant} and use a new syringe.
+    \item Pick modules from storage and identify them. Check that the parts satisfy the quality criteria by retrieving their information in the database. \label{enum:startenacpulation}
+    \item Record the UNL id (\texttt{Nxxxyy}) for each module. Write down the number on the edge of the chuck for further identification.
+    \item Adjust configuration in software to reflect positions in use.
+    \item Run pattern recognition step. Check if locations found are sound.
+    \item Run program. Supervise progress and stop in need, especially when modules are at risk.
+    \item At the end of the full cycle, check visually if all wirebond foots are covered as needed (TODO: add a sketch for comparison). Use manual mode to correct for any missing encapsulant and record such special action.
+    \item Transfer chuck to curing oven. Run the program until finished.
+    \item Finished modules shall not be handled for at least 2~hours.
+    \item Document all actions even if the curing time may not be over.
+    \item If more than one chuck full of modules needs to be encapsulated, repeat from step \ref{enum:startenacpulation} as often as needed.
+    \item Remove the syringe and dispose off.
+\end{enumerate}
+
+%------------------------------------------------------------------
+\section{Documentation}
+The following information needs to be recorded in the report for the UNL logbook:
+\begin{itemize}
+    \item Date, time (start--end) and operator name
+    \item LabView software: version
+    \item Id of parts used: UNL batch identification
+    \item Batch number and expiration date of Sylguard components
+    \item Any special observations, e.g.~damage to parts not already recorded during visual inspection, deviations from normal procedures
+\end{itemize}
+A template document to fill in is provided on the TWiki page and may be used as guidance.
+
+Purdue database: Status of BBM and HDI need to be updated.
+
+\end{document}
+
