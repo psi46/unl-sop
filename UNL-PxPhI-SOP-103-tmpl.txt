@@ -17,12 +17,12 @@ Object status updated in Purdue database: [ ] Yes  [ ] No (Justify in comments)
 
 List id of parts involved in table below:
 
-UNL Id    | BBM Id              | HDI S/N
-----------+---------------------+----------------
-          |                     |
-          |                     |
-          |                     |
-          |                     |
+UNL batch No. | BBM Id              | HDI S/N
+--------------+---------------------+----------------
+              |                     |
+              |                     |
+              |                     |
+              |                     |
 
 Weights removed          : ______________________ (date/time)
 

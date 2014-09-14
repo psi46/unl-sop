@@ -1,0 +1,90 @@
+\documentclass[12pt]{unlsilabsop}
+\title{Module assembly: Wirebonding of modules}
+\date{September 14, 2014}
+\author{Frank Meier Aeschbacher}
+\approved{Frank Meier Aeschbacher}
+\sopid{104}
+\sopversion{v0}
+\sopabstract{Describes the procedures to wirebond modules using the Delvotec 56XX wirebonder. The procedure takes place in the clean room.}
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------
+\section{Scope}
+This is a regular part in the manufacturing process of pixel modules at UNL.
+
+%------------------------------------------------------------------
+\section{Purpose}
+The wirebonds provide the electrical connections between the ROC and the HDI. Additional wirebonds are required to provide the HV bias potential to the sensor.
+
+%------------------------------------------------------------------
+%>\section{Definitions}
+
+%------------------------------------------------------------------
+\section{Responsibilities}
+
+%------------------------------------------------------------------
+\section{Equipment}
+
+\begin{itemize}
+    \item Delvotec 56XX wirebonder
+    \item Delvotec 5630 bond head
+    \item Chuck
+    \item Bond wire, aluminium 25\,$\mu$m diameter, Heraeus ALW-29S on 2" spool
+    \item Tweezers for wire handling
+    \item Test coupon
+\end{itemize}
+
+%------------------------------------------------------------------
+\section{Procedure}
+
+The procedure below describes the steps for bonding one module. The chuck provides space for up to 4 modules, which may be processed in one batch at the discretion of the operator.
+\begin{enumerate}
+    \item Handle bare modules only with proper protection: ESD wristband, gloves, face mask.
+    \item If not already mounted: Mount the bond head following the manual
+    \item Perform a readiness check of the wirebonder:
+    \begin{enumerate}
+	\item Check if bond wire feeds. If in doubt, re-feed wire according to manual.
+	\item If bonding for the first time this day: Make a manual test bond on a coupon. Add this to your report.
+	\item Check if vacuum is present by reading the gauge. If not, perform the following checks: vacuum pump is on (outside cleanroom), valve is open.
+    \end{enumerate}
+    \item Depending on how modules were received, proceed either way:
+    \begin{enumerate}
+	\item Module handed over on chuck from glueing: Take note of placement of modules for verification.
+	\item Bonding of individual modules: Pick modules from storage and identify them (HDI S/N and UNL batch no.). Place them on a chuck, take note which module is placed in with location.
+    \end{enumerate}
+    \item Check that the parts satisfy the quality criteria by retrieving their information in the database. 
+    \item Visually inspect all modules for any possible issues:
+    \begin{itemize}
+	\item bond pads on HDI and ROC are clean
+	\item HV bond pad on sensor is clean and accessible for the bond head
+    \end{itemize}
+    \item Record the HDI S/N and UNL batch id (\texttt{Nxxxyy}) for each module.
+    \item Load the bond program named TODO: insert correct program name
+    \item Run alignment step.
+    \item Run program. Supervise progress and stop in need, especially when modules are at risk or wirebonds are continuously missing. No stop needed for an occasional miss.
+    \item At the end of the full cycle, check visually if all wirebonds are present. Rebond any missing bonds.
+\end{enumerate}
+
+%------------------------------------------------------------------
+\section{Documentation}
+The following information needs to be recorded in the report for the UNL logbook:
+\begin{itemize}
+    \item Date, time (start--end) and operator name
+    \item Wirebonder software: version
+    \item Id of parts used
+    \item Batch number and expiration date of wire
+    \item Any special observations, e.g.~damage to parts not already recorded during visual inspection, deviations from normal procedures
+\end{itemize}
+A template document to fill in is provided on the TWiki page and may be used as guidance.
+
+Purdue database: Status of BBM and HDI need to be updated.
+
+%------------------------------------------------------------------
+\section{References}
+
+The manual to the wirebonder is available in the cleanroom as a printed copy in a folder and electronically as PDF on the cleanroom computer.
+
+\end{document}
+

@@ -25,24 +25,21 @@ Object status updated in Purdue database: [ ] Yes  [ ] No (Justify in comments)
 
 List id of parts involved in table below:
 
-UNL Id    | BBM Id              
-----------+---------------------
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
-          |                     
+UNL batch No. | BBM Id              
+--------------+---------------------
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
+              |                     
 
 Total number of modules encapsulated in this run: ____
 
