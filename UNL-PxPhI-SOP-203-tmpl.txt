@@ -7,6 +7,8 @@ Date                : ___________
 
 Time start          : _____  end: _____
 
+Operator name       : _______________
+
 pXar version used   : ____
 
 HV power supply S/N : _______

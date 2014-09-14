@@ -1,0 +1,38 @@
+Manufacturing of modules: Glued HDI on BBM
+------------------------------------------
+
+Procedure performed according to SOP 103-v0
+
+Date                : ___________
+
+Time start          : _____  end: _____ (exclude curing time)
+
+Operator name       : _______________
+
+Software version    : ____
+
+Araldite batch no.  : _______
+
+Object status updated in Purdue database: [ ] Yes  [ ] No (Justify in comments)
+
+List id of parts involved in table below:
+
+UNL Id    | BBM Id              | HDI S/N
+----------+---------------------+----------------
+          |                     |
+          |                     |
+          |                     |
+          |                     |
+
+Weights removed          : ______________________ (date/time)
+
+Chuck removed from gantry: ______________________ (date/time)
+
+Special observations:
+
+
+
+
+Comments:
+
+
