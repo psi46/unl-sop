@@ -1,0 +1,56 @@
+Manufacturing of modules: Deliveries of BBM
+-------------------------------------------
+
+Procedure performed according to SOP 102-v0
+
+NOTE: Report one shipment at once, even if received multiple shipments per day.
+
+Date                : ___________
+
+Time start          : _____  end: _____ (exclude curing time)
+
+Operator name       : _______________
+
+Shipment documents retreived: [ ] Yes  [ ] No (Report deviations in comments)
+
+Shipment received intact and no obvious damage to parts observed: [ ] Yes  [ ] No (Report deviations in comments)
+
+
+List id of parts involved in table below:
+
+BBM wafer ID | Location on wafer | Tests ok | Special observations (observed damages, missed bonds etc.)
+-------------+-------------------+----------+-----------------------------------------------------------
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+             |                   |          |
+
+List matches documents provided with shipment: [ ] Yes  [ ] No (Report deviations in comments)
+
+NOTE: Report test results below or as individual reports. Follow instructions of test SOP on what to report. Add references to reports if needed.
+
+Total number of BBM handled by this shipment: _________
+
+Of this, ____ were found to pass all the tests.
+
+Object status updated in Purdue database: [ ] Yes  [ ] No (Justify in comments)
+
+Special observations:
+
+
+
+
+Comments:
+
+
