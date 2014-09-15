@@ -18,7 +18,7 @@ This procedure shall not be used for fully assembled modules.
 
 %------------------------------------------------------------------
 \section{Purpose}
-The IV curve is a critical parameter to check for the sanity of the sensor.
+The IV curve is a critical parameter to check for the performance and sanity of the sensor.
 
 %------------------------------------------------------------------
 %\section{Definitions}
@@ -34,7 +34,7 @@ The IV curve is a critical parameter to check for the sanity of the sensor.
 
 \begin{itemize}
 \item \textbf{Probe station} Jmicro JR-2745, to hold the setup
-\item \textbf{Micropositioner} Jmicro KRN-09S, magnetically hold on the probe station, 2 pieces
+\item \textbf{Micropositioner} Jmicro KRN-09S, magnetically held on the probe station, 2 pieces
 \item \textbf{Pico probe model 7} mounted on microspositioner, used for GND connection
 \item \textbf{Pico probe model 7A} mounted on micropositioner, used for HV connection
 \item \textbf{Probe tips} Model 7-125, one for each pico probe
@@ -44,7 +44,7 @@ The IV curve is a critical parameter to check for the sanity of the sensor.
 \item \textbf{Connection box} to make proper connection between picoprobes and HV power supply
 \item \textbf{Dark box} custom made dark PVC box
 \item \textbf{Vacuum chuck} custom made, used to release modules off the GelPak
-\item \textbf{Vacuum pen} connected to probe station, use it for manipulating bare modules
+\item \textbf{Vacuum pen} connected to probe station, for manipulating bare modules
 \end{itemize}
 
 %------------------------------------------------------------------
@@ -52,12 +52,28 @@ The IV curve is a critical parameter to check for the sanity of the sensor.
 
 Prepare the setup as shown in the image (TODO: add image)
 
+\subsection{Test parameters}
+
+If not told otherwise, run the test using the following parameters:
+
+\bigskip
+
+\begin{tabular}{lc}
+\toprule
+Parameter & Value \\
+\midrule
+Voltage range: & $0\dots-600$\,V \\
+Voltage steps: & 5\,V \\
+Wait time between steps: & 3\,s \\
+\bottomrule
+\end{tabular}
+
 %------------------------------------------------------------------
 \section{Procedures}
 
 \begin{enumerate}
-\item The check maintenance records of the HV power supply. If the last calibration check is older than 7 days repeat it according to SOP~308.
 \item Handle bare modules only with proper protection: ESD wristband, gloves, face mask.
+\item Check maintenance records of the HV power supply. If the last calibration check is older than 7 days repeat it according to SOP~308.
 \item Make sure the HV power supply is set to 0\,V.
 \item Place the GelPak on the chuck, enable vacuum.
 \item Use the vacuum pen to transfer the module to the probe station.
