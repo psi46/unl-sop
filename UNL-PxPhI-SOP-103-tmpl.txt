@@ -11,6 +11,8 @@ Operator name       : _______________
 
 Software version    : ____
 
+Vacuum pressure     : ______ psi
+
 Araldite batch no.  : _______
 
 Object status updated in Purdue database: [ ] Yes  [ ] No (Justify in comments)

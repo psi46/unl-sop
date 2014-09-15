@@ -31,9 +31,8 @@ All SiLab team members are required to obey these rules.
 \subsection{Gantry}
 The gantry code comprises of prorietary software and custom code in LabView, VisualBasic, and C++. All components are necessary to operate the gantry.
 \begin{itemize}
-    \item \textbf{Gantry software. } TODO: Ask José about what would be needed for a clean install
-    \item \textbf{LabView code.} The code is stored in a \texttt{git} repository, regularly replicated to \url{https://git.unl.edu/jmonroy2/glueing}. Recovery requires a clone of that repository plus configuration work.
-    \item \textbf{Pattern recognition.} Part of the LabView code uses custom made pattern recognition software written in C++. TODO: Ask Caleb where the sources are stored
+    \item \textbf{Gantry software.} In case of disaster recovery, the following software needs to be reinstalled: Aerotec Motion Composer, MatLab and LabView 2011 (or newer).
+    \item \textbf{LabView code.} The code is stored in a \texttt{git} repository, regularly replicated to \url{https://git.unl.edu/jmonroy2/glueing}. This includes the pattern recognition part, written in-house in C++. Recovery requires a clone of that repository plus configuration work.
     \item \textbf{Data.} Logfiles are kept locally, no backup foreseen so far.
 \end{itemize}
 TODO: This covers glueing only. Where is the potting code stored?
@@ -42,7 +41,7 @@ TODO: This covers glueing only. Where is the potting code stored?
 The wirebonder is operated by a PC running Windows XP embedded into the machine. The software is unavailable on more recent versions of Windows. For security reasons, no network access is allowed. All backup and transfer of user data has to make use of a USB thumb drive.
 \begin{itemize}
     \item \textbf{Bond programs.} These programs are custom to accommodate our modules. TODO: Establish rule how this is transferred and stored. Preferrably to git.unl.edu like all the other stuff.
-    \item \textbf{Machine configuration.} This cannot be stored in a better way than as screenshots. TODO: Add this to the rep of bond programs.
+    \item \textbf{Machine configuration.} This cannot be stored in a better way than as screenshots. TODO: Add this to the rep of bond programs or put it on th eUNL wirebonding TWiki.
     \item \textbf{Logfiles.} Logfiles are kept locally, no backup foreseen so far.
     \item \textbf{Data.} Mostly test results from pull tests. Need to be transferred using a USB thumbdrive.
 \end{itemize}
@@ -57,13 +56,14 @@ Test stands operate software developed by the CMS pixel community (\texttt{pXar}
 \end{itemize}
 
 \subsection{UNLHEP electronic logbook}
-TODO: Ask Caleb/Aaron about the backup and recovery procedures here.
+The elog is an instance of the electronic logbook software available at \url{https://midas.psi.ch/elog/}. Our installation is hosted on the UNL Tier3 datacenter and its data is included in the regular backup.
+% Gerhan Attbury at T2/T3
 
 \subsection{Purdue database}
-This is used to store aggregated results and to manage workflows. The database is hosted by Purdue and they are responsible for backup and recovery.
+This is used to store aggregated results and to manage workflows. The database is hosted and maintained by our colleagues at Purdue. It is accessed through a web interface. Backup and recovery is a responsibility of Purdue.
 
 \subsection{Fermilab database}
-At the time of writing, this database is not yet productive. Very likely we will not be responsible for backup and recovery.
+At the time of writing, this database is not yet productive. Hosting, maintenance, backup and recovery are responsibilities of our colleagues at Fermilab.
 
 \end{document}
 
