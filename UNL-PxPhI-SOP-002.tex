@@ -1,0 +1,69 @@
+\documentclass[12pt]{unlsilabsop}
+\title{Backup and recovery}
+\date{September 14, 2014}
+\author{Frank Meier Aeschbacher}
+\approved{Frank Meier Aeschbacher}
+\sopid{002}
+\sopversion{v0}
+\sopabstract{Describes how parts used and produced during manufacturing are stored.}
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------
+\section{Scope}
+This covers all computer systems involved in manufacturing modules.
+
+%------------------------------------------------------------------
+\section{Purpose}
+Computer systems are used to control manufacturing processes, perform tests, and to store critical results. This document describes how the systems get backuped.
+
+%------------------------------------------------------------------
+%>\section{Definitions}
+
+%------------------------------------------------------------------
+\section{Responsibilities}
+All SiLab team members are required to obey these rules.
+
+%------------------------------------------------------------------
+\section{Principles}
+
+\subsection{Gantry}
+The gantry code comprises of prorietary software and custom code in LabView, VisualBasic, and C++. All components are necessary to operate the gantry.
+\begin{itemize}
+    \item \textbf{Gantry software. } TODO: Ask José about what would be needed for a clean install
+    \item \textbf{LabView code.} The code is stored in a \texttt{git} repository, regularly replicated to \url{https://git.unl.edu/jmonroy2/glueing}. Recovery requires a clone of that repository plus configuration work.
+    \item \textbf{Pattern recognition.} Part of the LabView code uses custom made pattern recognition software written in C++. TODO: Ask Caleb where the sources are stored
+    \item \textbf{Data.} Logfiles are kept locally, no backup foreseen so far.
+\end{itemize}
+TODO: This covers glueing only. Where is the potting code stored?
+
+\subsection{Wirebonder}
+The wirebonder is operated by a PC running Windows XP embedded into the machine. The software is unavailble on more recent versions of Windows. For security reasons, no network access is allowed. All backup and transfer of user data has to make use of a USB thumb drive.
+\begin{itemize}
+    \item \textbf{Bond programs.} These programs are custom to accommodate our modules. TODO: Establish rule how this is transferred and stored. Preferrably to git.unl.edu like all the other stuff.
+    \item \textbf{Machine configuration.} This cannot be stored in a better way than as screenshots. TODO: Add this to the rep of bond programs.
+    \item \textbf{Logfiles.} Logfiles are kept locally, no backup foreseen so far.
+    \item \textbf{Data.} Mostly test results from pull tests. Need to be transferred using a USB thumbdrive.
+\end{itemize}
+
+\subsection{Test stands}
+Test stands operate software developed by the CMS pixel community (\texttt{pXar}, \texttt{ElCommandante}, \texttt{psi46test}) using DTB and in one case control the cold box.
+\begin{itemize}
+    \item \textbf{Source code.} All source code is available for download on \texttt{https://github.com/psi46} and can be compiled according to instructions available at \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/Psi46}.
+    \item \textbf{Configuration.} Any special configuration needs to be documented, preferrably inside the colection of UNL TWiki pages TODO: Discuss this
+    \item \textbf{Logfiles.} Logfiles are kept locally, no backup foreseen so far.
+    \item \textbf{Data.} TODO: How do we store this stuff? Using moreweb (like BPix and Purdue)? Database?
+\end{itemize}
+
+\subsection{UNLHEP electronic logbook}
+TODO: Ask Caleb/Aaron about the backup and recovery procedures here.
+
+\subsection{Purdue database}
+This is used to store aggregated results and to manage workflows. The database is hosted by Purdue and they are responsible for backup and recovery.
+
+\subsection{Fermilab database}
+At the time of writing, this database is not yet productive. Very likely we will not be responsible for backup and recovery.
+
+\end{document}
+
