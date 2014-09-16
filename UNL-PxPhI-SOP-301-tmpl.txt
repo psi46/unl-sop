@@ -5,7 +5,7 @@ Procedure performed according to SOP 301-v0
 
 Date                : ___________
 
-Time start          : _____  end: _____ (exclude curing time)
+Time start          : _____  end: _____
 
 Operator name       : _______________
 
