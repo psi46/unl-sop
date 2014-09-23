@@ -44,7 +44,15 @@ The wirebonds provide the electrical connections between the ROC and the HDI. Ad
 
 \subsection{Bonder setting}
 
-The following settings have to be used by the operator. Whenever a range is given, the lower value is the normal condition. If the operator experiences problems in bonding to the HDI, the values may be increased within the given range. In any case, the settings need to be documented in the report and deviation from the normal settings need to be justified.
+Table \ref{tbl:bondpar} lists the bond settings which have to be used by the operator. Whenever a range is given, the lower value is the normal condition. If the operator experiences problems in bonding to the HDI, the values may be increased within the given range. In any case, the settings need to be documented in the report and deviation from the normal settings need to be justified. Table \ref{tbl:otherpar} lists general machine settings to be used.
+
+\begin{table*}[hH]
+\begin{center}
+\caption{Bond parameter settings for bonds from HDI to ROC and HDI to sensor HV pad. Ranges denote allowed parameter boundaries at the discretion of the operator to adjust for quality variations of the HDI.}
+\label{tbl:bondpar}
+
+\bigskip
+
 \begin{tabular}{lc|cc|cc}
 \toprule
 Parameter & Unit & HDI & ROC & HV HDI & HV sensor \\
@@ -62,6 +70,39 @@ ClampFlag    & --     & \multicolumn{2}{|c|}{0 } & \multicolumn{2}{|c}{0 } \\
 XY LoopH-Fct & \%     & \multicolumn{2}{|c|}{40} & \multicolumn{2}{|c}{40} \\
    \bottomrule
 \end{tabular}
+\end{center}
+\end{table*}
+
+\begin{table*}[hH]
+\begin{center}
+\caption{Machine parameter settings. Settings marked with an asterisk (*) may vary according to operator's preference.}
+\label{tbl:otherpar}
+
+\bigskip
+
+\begin{tabular}{lcc}
+\toprule
+Parameter          & Unit   & Value \\
+\midrule
+Workheight 1       & $\mu$m & 24182 *\\
+Workheight 2       & $\mu$m & 36293 * \\
+\multicolumn{2}{l}{Use Diagonal Tolerance} & yes \\
+Diagonal Tolerance & $\mu$m & 100 \\
+TD Ramp            & $\mu$m & 300 \\
+Clamp value        & digit  & 650 \\
+Feed               & steps  & 16 \\
+Limiter            & steps  & 16 \\
+Wire Diameter      & $\mu$m & 25 \\
+Production Mode    & --     & 1 \\
+Adjust Mode        & --     & 1 \\
+Bond Mode          & --     & 0 \\
+Monitoring Mode    & --     & 0 \\
+\midrule
+Motor Z max        & $\mu$m & 40800 \\
+    \bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
 
 %------------------------------------------------------------------
 \section{Procedure}
