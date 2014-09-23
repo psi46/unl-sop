@@ -44,21 +44,22 @@ The wirebonds provide the electrical connections between the ROC and the HDI. Ad
 
 \subsection{Bonder setting}
 
+The following settings have to be used by the operator. Whenever a range is given, the lower value is the normal condition. If the operator experiences problems in bonding to the HDI, the values may be increased within the given range. In any case, the settings need to be documented in the report and deviation from the normal settings need to be justified.
 \begin{tabular}{lc|cc|cc}
 \toprule
 Parameter & Unit & HDI & ROC & HV HDI & HV sensor \\
 \multicolumn{2}{l|}{Bond order} & 1 & 2 & 1 & 2 \\
     \midrule
 US Time      &  ms    & 50         & 50 & 50         & 50  \\
-B-Force      &  cN    & 25\dots30  & 25 & 25\dots30  & 25 \\
-US Power     & digit  & 95\dots155 & 95 & 95\dots155 & 95 \\
-TD Steps     & $\mu$m & 10\dots15  & 10 & 10\dots15  & 10 \\
+B-Force      &  cN    & 25\,--\,30  & 25 & 25\,--\,30  & 25 \\
+US Power     & digit  & 95\,--\,155 & 95 & 95\,--\,155 & 95 \\
+TD Steps     & $\mu$m & 10\,--\,15  & 10 & 10\,--\,15  & 10 \\
     \midrule
-Z-Presign    & \%     & \multicolumn{2}{|c|}{80} & \multicolumn{2}{|c|}{80} \\
-Loop Height  & $\mu$m & \multicolumn{2}{|c|}{0 } & \multicolumn{2}{|c|}{0 } \\
-LoopH-Fct    & \%     & \multicolumn{2}{|c|}{85} & \multicolumn{2}{|c|}{85} \\
-ClampFlag    & --     & \multicolumn{2}{|c|}{0 } & \multicolumn{2}{|c|}{0 } \\
-XY LoopH-Fct & \%     & \multicolumn{2}{|c|}{40} & \multicolumn{2}{|c|}{40} \\
+Z-Presign    & \%     & \multicolumn{2}{|c|}{80} & \multicolumn{2}{|c}{80} \\
+Loop Height  & $\mu$m & \multicolumn{2}{|c|}{0 } & \multicolumn{2}{|c}{0 } \\
+LoopH-Fct    & \%     & \multicolumn{2}{|c|}{85} & \multicolumn{2}{|c}{85} \\
+ClampFlag    & --     & \multicolumn{2}{|c|}{0 } & \multicolumn{2}{|c}{0 } \\
+XY LoopH-Fct & \%     & \multicolumn{2}{|c|}{40} & \multicolumn{2}{|c}{40} \\
    \bottomrule
 \end{tabular}
 
