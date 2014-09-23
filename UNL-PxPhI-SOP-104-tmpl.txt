@@ -15,6 +15,24 @@ Wire batch no.      : ______________    Expiration date: ______________
 
 Wirebonder checked for wire feed [ ] Yes  [ ] No (Report deviations in comments)
 
+Bond parameters used:
+
+Where    US time  US power  B-Force start  TS steps
+         (ms)     (digit)   (cN)           (µm)
+-------- -------  --------  -------------  --------
+HDI                                                
+ROC                                                
+HV pad                                             
+
+Loop parameters used:
+
+Bond         Z-Presign  LoopH-Fct  XYLoopHeightFct  Z-Delay
+             (%)        (%)        (%)              (%)
+-----------  ---------  ---------  ---------------  -------
+HDI - ROC                                           
+HDI - HV                                            
+
+
 Object status updated in Purdue database: [ ] Yes  [ ] No (Justify in comments)
 
 List id of parts involved in table below:
