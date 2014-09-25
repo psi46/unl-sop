@@ -31,19 +31,19 @@ Z-Delay         (%): ___
 
 List id of parts and pad areas used in table below:
 
-HDI Id.       | ROC pad | Pull strength                    | Fail modes             | Special observations (observed damages, missed bonds etc.)
-              |         | average | sigma |  min   |  max  |  1 |  2 |  3 |  4 |  5 | 
---------------+---------+----------------------------------+------------------------+-----------------------------------------------------------
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
-              |         |                                  |                        |
+HDI Id.               | ROC pad | Pull strength                 | Fail modes             | Special observations (observed damages, missed bonds etc.)
+                      |         | average | sigma | min  | max  |  1 |  2 |  3 |  4 |  5 | 
+----------------------+---------+----------------------------------+------------------------+-----------------------------------------------------------
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
+                      |         |                               |                        |
 
 
 Total number of ROC pads bonded and tested: ____
