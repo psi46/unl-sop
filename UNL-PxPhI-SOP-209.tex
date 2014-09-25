@@ -46,6 +46,7 @@ Bondability is a crtical quality criterion for HDI. This test allows to characte
     \item Cotton swabs
 \end{itemize}
 
+%------------------------------------------------------------------
 \subsection{Bonder setting}
 
 Table \ref{tbl:bondpar} lists the bond settings which have to be used by the operator. In order to maintain comparability, using settings other than listed in this table are only allowed upon special request and need explicit mentioning in the test report. Table \ref{tbl:otherpar} lists general machine settings to be used.
@@ -108,6 +109,10 @@ Motor Z max        & $\mu$m & 40800 \\
 \end{center}
 \end{table*}
 
+%------------------------------------------------------------------
+\subsection{Pull tester settings}
+TODO: Deliver this list
+
 
 %------------------------------------------------------------------
 \section{Procedures}
@@ -131,9 +136,11 @@ The test consists of two steps: making bonds and pulling them. If more than one 
     \item Run alignment step. Choose one ROC pad and record the number.
     \item Run program. Supervise progress and stop in need, especially when modules are at risk or wirebonds are continuously missing. No stop needed for an occasional miss. Record number of misses per pad group for one ROC.
     \item At the end of the full cycle, check visually if all wirebonds are present. Do not rebond any missing bonds.
-    \item Configure the machine for pull testing
+    \item Configure the machine for pull testing.
+    \item Adjust z-height of the pull hook and set lowest level to a safe height.
+    \item Adjust microscope to have the hook and the bond under test in focus.
     \item Make destructive pull tests for $N=25$ wirebonds per ROC pad. The remaining bonds are spares to compensates for missed bonds.
-    \item Rate the failures according to the scheme given in Fig.~\ref{fig:grading}.
+    \item Observe every pull through the microscope and rate the failures according to the scheme given in Fig.~\ref{fig:grading}.
     \item Report the results.
 \end{enumerate}
 
