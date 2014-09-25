@@ -14,6 +14,8 @@
 \RequirePackage{titlesec}
 \RequirePackage{graphicx}
 \RequirePackage{tocloft}% http://ctan.org/pkg/tocloft
+\RequirePackage{float}
+\restylefloat{table}
 \setlength{\cftsecnumwidth}{4em}% Set length of number width in ToC for \subsection
 \setlength{\cftsubsecnumwidth}{4em}% Set length of number width in ToC for \subsection
 
