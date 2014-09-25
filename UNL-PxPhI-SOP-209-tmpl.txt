@@ -5,7 +5,7 @@ Procedure performed according to SOP 209-v0
 
 Date                : ___________
 
-Time start          : _____  end: _____ (exclude curing time)
+Time start          : _____  end: _____
 
 Operator name       : _______________
 
@@ -15,31 +15,36 @@ Wirebonder checked for wire feed [ ] Yes  [ ] No (Report deviations in comments)
 
 Bond parameters used - Set: ___
 
-US time  US power  B-Force start  TS steps
-(ms)     (digit)   (cN)           (µm)
--------  --------  -------------  --------
+US time  (ms)   : ___
+US power (digit): ___
+B-Force  (cN)   : ___
+TS steps (µm)   : ___
+
 
 Loop parameters used:
 
-Z-Presign  LoopH-Fct  XYLoopHeightFct  Z-Delay
-(%)        (%)        (%)              (%)
----------  ---------  ---------------  -------
+Z-Presign       (%): ___
+LoopH-Fct       (%): ___
+XYLoopHeightFct (%): ___
+Z-Delay         (%): ___
 
 
 List id of parts and pad areas used in table below:
 
-HDI Id.       | ROC pad    | Special observations (observed damages, missed bonds etc.)
---------------+------------+-----------------------------------------------------------
-              |            |
-              |            |
-              |            |
-              |            |
-              |            |
-              |            |
-              |            |
-              |            |
-              |            |
-              |            |
+HDI Id.       | ROC pad | Pull strength                    | Fail modes             | Special observations (observed damages, missed bonds etc.)
+              |         | average | sigma |  min   |  max  |  1 |  2 |  3 |  4 |  5 | 
+--------------+---------+----------------------------------+------------------------+-----------------------------------------------------------
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+              |         |                                  |                        |
+
 
 Total number of ROC pads bonded and tested: ____
 
