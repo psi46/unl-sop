@@ -1,7 +1,7 @@
 \documentclass[12pt]{unlsilabsop}
 
 \title{Master SOP}
-\date{September 11, 2014}
+\date{September 29, 2014}
 \author{Frank Meier Aeschbacher}
 \approved{Frank Meier Aeschbacher}
 \sopid{000}
@@ -141,7 +141,14 @@ See the resources section for links.
 
 \subsection{Identification of parts and batches}
 \begin{itemize}
-    \item Module parts and complete modules are identified using the naming convention (see resources section)
+    \item BBM and complete modules are identified using the naming convention (see resources section).
+    \item To identify an HDI (as of RevC), three numbers are reuired:
+    \begin{itemize}
+	\item Work order (\texttt{AAANN} where \texttt{AAA} are alphanumeric digits, \texttt{NN} are numeric digits)
+	\item Date code (\texttt{WWYY} where \texttt{WW} is the week of the year and \texttt{YY} is the year)
+	\item Panel and position number (\texttt{N-PMM} where \texttt{N} is the panel number processed and \texttt{MM} is the position of the HDI on the panel)
+    \end{itemize}
+    Other information on an HDI can be safely disregarded. An example is given in Fig.~\ref{fig:HDI_SN}.
     \item A batch at UNL is identified using a six-digit number of the format \texttt{Nxxxyy} where
     \begin{itemize}
 	\item \texttt{N} identifies a batch number, N standing for Nebraska
@@ -153,6 +160,14 @@ See the resources section for links.
     The list of batch numbers is maintained in a spreadsheet, see the resources section.
     \item The naming convention is the only official identifier. The batch number is for internal use by UNL for internal convenience.
 \end{itemize}
+
+\begin{figure}[hH]
+    \begin{center}
+        \includegraphics[width=4cm]{img/HDI_SN.jpg}
+        \caption{Example to identify HDI: ID of this HDI would be \texttt{YGU25 1814 1-P25}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \label{fig:HDI_SN}
+    \end{center}
+\end{figure}
 
 %-------------------------------------------------------
 \section{Training}
