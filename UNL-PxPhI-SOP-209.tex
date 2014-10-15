@@ -1,6 +1,6 @@
 \documentclass[10pt]{unlsilabsop}
 \title{Destructive wirebond acceptance test of HDI}
-\date{September 25, 2014}
+\date{October 13, 2014}
 \author{Frank Meier Aeschbacher}
 \approved{Frank Meier Aeschbacher}
 \sopid{209}
@@ -176,6 +176,7 @@ The test consists of two steps: making bonds and pulling them. If more than one 
     \item Identify the HDI and record this information.
     \item Load the bond program named \texttt{SOP-209-DestructiveHDItesting-SetX.db}, where \texttt{X} identifies the parameter set.
     \item Check the settings with the test requirements. For the bond parameters, select all wires and check the parameters for first bond, loop, and second bond.
+    \item Determine and record the height of the HDI bond pads. Do this in ``Learn chip'', click on $z$ height, move the bond head to a suitable and representative position and hit ``Store trace''. If testing more HDI of the same kind, this step may be omitted for later HDI in the same go.
     \item Run alignment step. Choose one ROC pad and record the number.
     \item Run program. Supervise progress and stop in need, especially when HDI are at risk or wirebonds are continuously missing. No stop needed for an occasional miss. Record number of misses per pad group for one ROC.
     \item At the end of the full cycle, check visually if all wirebonds are present. Do not rebond any missing bonds (it is a test procedure, not for manufacturing).
@@ -183,6 +184,7 @@ The test consists of two steps: making bonds and pulling them. If more than one 
 \subsection{Step 2: Pull testing of bonds}
 \begin{enumerate}
     \item Configure the machine for pull testing.
+    \item Check vacuum.
     \item Adjust z-height of the pull hook and set lowest level to a safe height.
     \item Adjust microscope to have the hook and the bond under test in focus.
     \item Make destructive pull tests using testname \texttt{HDI acceptance test}. Make $N=25$ pull tests per ROC pad. The remaining bonds are spares to compensate for missed bonds.
