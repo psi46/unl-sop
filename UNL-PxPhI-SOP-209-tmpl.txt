@@ -16,9 +16,9 @@ Wirebonder checked for wire feed [ ] Yes  [ ] No (Report deviations in comments)
 Bond parameters used - Set: ___
 
 US time  (ms)   : ___
-US power (digit): ___
 B-Force  (cN)   : ___
-TS steps (µm)   : ___
+US power (digit): ___
+TD steps (µm)   : ___
 
 
 Loop parameters used:
