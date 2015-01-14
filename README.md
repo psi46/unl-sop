@@ -12,7 +12,7 @@ If everything is properly set up, do
 
 ```
 make -j4
-'''
+````
 and the pdf files should appear shortly.
 
 Documentation templates
