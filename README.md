@@ -15,6 +15,12 @@ make -j4
 ````
 and the pdf files should appear shortly.
 
+If you like to clean up things after making the pdf's, issue
+```
+make clean
+```
+This will delete all intermediate files but keeps the pdf's.
+
 Documentation templates
 -----------------------
 Some SOP come with a txt-file, which should be used to document the work done using that SOP. Use them as a template in an editor of your choice and upload it to the elog.
