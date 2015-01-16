@@ -1,0 +1,24 @@
+Visual inspection of BBM
+------------------------
+
+Test performed according to SOP 202-v0
+
+Date                : ___________
+
+Time start          : _____  end: _____
+
+Operator name       : _______________
+
+Results uploaded to Purdue database: [ ] Yes  [ ] No (Justify in comments)
+
+List id of tested modules:
+
+
+
+
+Special observations and image files added:
+
+
+
+
+Comments:
