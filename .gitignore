@@ -8,3 +8,4 @@
 *.make
 *.d
 *.fls
+*.temp
