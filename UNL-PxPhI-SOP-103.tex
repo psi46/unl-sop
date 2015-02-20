@@ -6,6 +6,9 @@
 \sopid{103}
 \sopversion{v0}
 \sopabstract{Describes the procedures to glue HDI on bare modules using the robotic gantry. The procedure takes place in the clean room.}
+
+\usepackage{graphicx}
+
 \begin{document}
 
 \maketitle
@@ -21,11 +24,31 @@ Modules require an additional
 %------------------------------------------------------------------
 \section{Definitions}
 
+\begin{itemize}
+\item Configuration: The glueing program can be used in 4 configurations
+  \begin{enumerate}
+  \item glass + polyimide: used for testing purpose; instead of module and HDI, glass and polyimide slides are used.
+  \item mocks: used for testing purpose. Module and HDI mocks are used.
+  \item HDIV2 + module: for manufacturing modules using HDI V2 (rev B). May be adapted to a new HDI version.
+  \item HDIV3 + module: for manufacturing modules using HDI V3 (rev C). May be adapted to a new HDI version.
+  \end{enumerate}
+\item Fiducials: Reference marks used to define the orientation of the HDI's, modules and tools. Each element have 4 fiducials. 
+\item Front panel: It is the window through which the user interact with the software. It show statistical information , status of the vacuum system, tools and elements in use and other information. Some features are:
+  \begin{enumerate}
+    \item In the main front panel only two step buttons are enabled at a time: the step button and the finish button. 
+    \item Each step have its own front panel. Once the step button is pressed the corresponding front panel appears as a pop-up window and the main front panel becomes locked.
+    \item Several pop-up windows appears along the glueing process asking for user inputs, follow the instructions given and$\backslash$or provide the information needed.
+  \end{enumerate}
+\end{itemize}
+
 %------------------------------------------------------------------
 \section{Responsibilities}
 
 %------------------------------------------------------------------
 \section{Equipment}
+\begin{center}
+\includegraphics{glueing_setup}
+\end{center}
 
 \begin{itemize}
     \item Gantry
@@ -39,36 +62,50 @@ Modules require an additional
     \item Felt tip marker, to write batch number on chuck
     \item Vacuum tool to release BBM from GelPak (if BBM were delivered in GelPak)
 \end{itemize}
+\begin{center}
+\includegraphics[scale = 0.3]{materials}
+\end{center}
 
-TODO: add image of setup. Make note that arrangement may vary as long as it matches the setup in the software
+
+Note: the arrangement may vary as long as it matches the setup in the software
 
 %------------------------------------------------------------------
 \section{Procedure}
 
 \begin{enumerate}
-    \item Handle bare modules only with proper protection: ESD wristband, gloves, face mask.
     \item Perform a readiness check of the gantry:
     \begin{enumerate}
 	\item Test presence of vaccum on the gauge, record the pressure.
-	\item Start LabView control software. Record version. TODO: note further checks
+	\item Open LabView control software ``Glueing\_V\#(main)''  where $\#$ is the software version. In the Desktop, there is a shortcut to the ``routine'' directory; in there find the directory ``Glueing V\#''. Use the latest version. Record version.$$ \sim\backslash MyDocuments\backslash andres\backslash routine\backslash glueing\_V\#\backslash Glueing\_V\#(main)$$
+        \item Check the controller and power supply are turned on.
     \end{enumerate}
-    \item Pick parts from storage and identify them. Check that the parts satisfy the quality criteria by retrieving their information in the database.
+    \item Pick parts from storage and identify them. Handle bare modules only with proper protection: ESD wristband, gloves, face mask. Check that the parts satisfy the quality criteria by retrieving their information in the database.
     \item Assign a new batch number (\texttt{Nxxx}) and assign a unique number (\texttt{Nxxxyy}) according to the rule described in \texttt{SOP~000}.
     \item Write the batch number to the BBM chuck on an edge for further identification.
-    \item Place the BBM on the chuck.
-    \item Place the HDI on the chuck.
+    \item Place the BBM on the chuck. Check if it(they) is(are) correctly aligned with the stencil.
+    \item Place the HDI on the chuck. Check if it(they) is(are) correctly aligned with the stencil.
     \item Place at minimum the required number of stamp tools and weight tools on the respective chucks.
-    \item Adjust configuration in software to reflect positions in use.
-    \item Run pattern recognition step. Check if locations found are sound.
+    \item Run the control sotfware $(Glueing\_V\#(main))$ and provide the information required in the pop-up windows:
+      \begin{enumerate}
+        \item Adjust configuration in software to reflect positions in use.
+        \item identification of the HDI's and modules.
+      \end{enumerate}
+      Supervise progress and stop if needed (using the RED stop button in the joystick), especially when modules are at risk.
+    \item Run pattern recognition step (find fiducials button). Check if locations found are sound (statistical information in the front panel must be used for this purpose). The image showed as template gives an idea of what to look for. 
     \item Prepare Araldite:
-    \begin{enumerate}
-	\item Record batch number of Araldite.
+      \begin{enumerate}
+        \item Record batch number of Araldite.
 	\item Place a hazelnut-sized amount of Araldite (syringe provides both components at once) on Post-It note.
 	\item Mix glue for one minute using the spatula.
 	\item Place a portion of the glue on all the required positions of the glue reservoir. Evenly distribute and smoothen the surface using the disposable PVC squeegee.
 	\item Coarsely clean spatula, dispose off Post-It note and squeegee.
     \end{enumerate}
-    \item Run all program steps in sequence (fiducial finding, apply glue, pick and place HDI, put weights). Supervise progress and stop if needed, especially when modules are at risk.
+    \item Run apply glue step (glue button). Some choices have to be done through pop-up windows. Comments and observations can be written anytime during the step execution.
+    \item Run pick and place step (pick \& place button). Some choices have to be done through pop-up windows. Comments and observations can be written anytime during the step execution.
+    \item Run pattern recognition after glue step (find fiducials after gluing button). Some choices have to be done through pop-up windows. Comments and observations can be written anytime during the step execution.
+    \item Run put weight step (weight button). Some choices have to be done through pop-up windows. Comments and observations can be written anytime during the step execution.
+    \item Run the finish step. (finish button). Final comments and observations can be written in a pop-up window.
+    \item Press the ``create report and finish'' button to generate the final report; some information have to be provided in a pop-up window.
     \item At the end of the full cycle, remove chuck with stamp tools and clean them thorougly using water and 2-propanole at sink outside the cleanroom. Let them dry and bring back to gantry.
     \item Document all actions even if the curing time may not be over.
     \item Finished modules shall not be handled for at least 2~hours.
@@ -78,7 +115,7 @@ TODO: add image of setup. Make note that arrangement may vary as long as it matc
 
 %------------------------------------------------------------------
 \section{Documentation}
-The following information needs to be recorded in the report for the UNL logbook:
+The following information is recorded in the report generated by the glueing software:
 \begin{itemize}
     \item Date, time (start--end) and operator name
     \item LabView software: version
@@ -88,10 +125,13 @@ The following information needs to be recorded in the report for the UNL logbook
 	    \item BBM: identification on box plus identification according to naming convention
 	    \item UNL batch number
 	\end{itemize}
-    \item Any special observations, e.g.~damage to parts not already recorded during visual inspection, deviations from normal procedures
 \end{itemize}
 
+Find the report at $\sim\backslash MyDocuments\backslash andres\backslash routine\backslash reports$. Any special observations, e.g. damage to parts not already recorded during visual inspection, deviations from normal procedures, can be added to the report, just open it  and add the info. Publish it in the UNL logbook. 
 Purdue database: Status of BBM and HDI need to be updated.
+
+
+
 
 \end{document}
 
