@@ -142,12 +142,14 @@ See the resources section for links.
 \subsection{Identification of parts and batches}
 \begin{itemize}
     \item BBM and complete modules are identified using the naming convention (see resources section).
-    \item To identify an HDI (as of RevC), three numbers are reuired:
+    \item To identify an HDI (as of RevC), three numbers are required:
     \begin{itemize}
 	\item Work order (\texttt{AAANN} where \texttt{AAA} are alphanumeric digits, \texttt{NN} are numeric digits)
 	\item Date code (\texttt{WWYY} where \texttt{WW} is the week of the year and \texttt{YY} is the year)
-	\item Panel and position number (\texttt{N-PMM} where \texttt{N} is the panel number processed and \texttt{MM} is the position of the HDI on the panel)
+	\item Panel and position number (\texttt{NNMM} where \texttt{NN} is the panel number processed (add a leading zero if necessary) and \texttt{MM} is the position of the HDI on the panel)
     \end{itemize}
+    This makes up the following unique id for an HDI: \texttt{AAANN-WWYY-NNMM}
+
     Other information on an HDI can be safely disregarded. An example is given in Fig.~\ref{fig:HDI_SN}.
     \item A batch at UNL is identified using a six-digit number of the format \texttt{Nxxxyy} where
     \begin{itemize}
@@ -158,13 +160,21 @@ See the resources section for links.
     Example: \texttt{N00403} is module \texttt{03} of batch \texttt{004}
 
     The list of batch numbers is maintained in a spreadsheet, see the resources section.
-    \item The naming convention is the only official identifier. The batch number is for internal use by UNL for internal convenience. It allows to identify modules made within the same batch and has an easier to communicate structure of only numbers plus one character.
+    \item The HDI id is the final and official identifier. The batch number is for internal use by UNL for internal convenience. It allows to identify modules made within the same batch, share the same tools, and has an easier to communicate structure of only numbers plus one character.
 \end{itemize}
 
 \begin{figure}[hH]
     \begin{center}
-        \includegraphics[width=4cm]{img/HDI_SN.jpg}
-        \caption{Example to identify HDI: ID of this HDI would be \texttt{YGU25 1814 1-P25}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \includegraphics[width=7cm]{img/HDIRevD_id.png}
+        \caption{\textbf{Example to identify an HDI (RevD):} ID of this HDI would be \texttt{YHC69-1015-0311}, meaning work order \texttt{YHC69}, manufactured in week 10 of year 2015, third panel processed in this batch, and this is HDI from position 11 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \label{fig:HDI_SN}
+    \end{center}
+\end{figure}
+
+\begin{figure}[hH]
+    \begin{center}
+        \includegraphics[width=5cm]{img/HDI_SN.jpg}
+        \caption{\textbf{Example to identify an HDI (RevC):} ID of this HDI would be \texttt{YGU25-1814-0125}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
         \label{fig:HDI_SN}
     \end{center}
 \end{figure}
@@ -180,7 +190,7 @@ See the resources section for links.
 %-------------------------------------------------------
 \section{Deviations from SOP}
 Two cases need to be distinguished:
-\begin{descrption}
+\begin{description}
     \item[Planned deviations] This can happen e.g.~upon special request to study certain changes to the procedures or due to specific circumstances (supplier issues, material changes etc.). Before starting the procedure, a written document needs to be signed off. In this document, the following topics need to be addressed: foreseen deviation, reason for doing so, risk assessment. Local site responsible persons decide if they can take over the responsibilities, otherwise sign-off needs to happen by project management.
     \item[Unforeseen deviations] This can happen when a special condition required a deviation. Such cases need to be documented within ample time by the person observing the deviation and require sign-off by a site responsible. The latter decide if special action is required and decide if project management needs to be informed about the deviation.
 \end{description}
