@@ -48,24 +48,22 @@ HDI are a critical part for manufacturing modules. This procedures ensures the b
     \item Open ESD boxes and get a first impression: Shipment should be in order and no immediate damage is visible.
     \item Take note of the serial numbers of HDI included in the delivery.
     \item Compare list of serial numbers with delivery statement. Report any inconsistency in documentation and inform shipper.
+    \item Record the serial numbers of the HDI in the Purdue database (``MAIN MENU''$\rightarrow$``HDI Submit''). Leave ``Additional Notes'' empty if nothing special to report, otherwise report any findings.
     \item Perform the visual inspection of HDI according to SOP~201.
-    \item Perform the electrical acceptance test of HDI according to SOP~204.
+    \item Update Purdue database. The following step needs to be done for every HDI in the delivery:
+    \begin{enumerate}
+        \item Retrieve the HDI: ``MAIN MENU''$\rightarrow$``Part List'', click on HDI on the list
+        \item Select ``Update Status''
+        \item Check the tickmark ``Inspected''. Document any findings in the text box. If needed, upload images (``Add a Picture''). Enter your name and hit ``SUBMIT''
+        \item If the HDI was ok, select tickmark ``Ready for Assembly'', otherwise ``Reject''. In the latter case, add a brief reason for the rejection. Hit ``SUBMIT''
+    \end{enumerate}
+    \item Only if requested: Perform the electrical acceptance test of HDI according to SOP~204.
     \item Failed HDI should be clearly marked as such and kept separate from good ones. Shipper needs to be informed and action taken.
-    \item Document any findings.
 \end{enumerate}
 
 %------------------------------------------------------------------
 \section{Documentation}
-The following information needs to be recorded in the report for the UNL logbook:
-\begin{itemize}
-    \item Date, time (start--end) and operator name
-    \item Id of delivery: date received, shipment/tracking number
-    \item List of parts received
-    \item Any special observations, e.g.~damage to parts, deviations from normal procedures
-\end{itemize}
-A template document to fill in is provided on the TWiki page and may be used as guidance.
-
-Purdue database: Status of HDI needs to be updated.
+Everything needs to be documented in the Purdue database per the instructions above. If nothing special is to report, no documentation is needed in the UNL elog.
 
 
 \end{document}
