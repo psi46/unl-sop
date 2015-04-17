@@ -1,7 +1,7 @@
 \documentclass[12pt]{unlsilabsop}
 
 \title{Master SOP}
-\date{September 29, 2014}
+\date{April 16, 2015}
 \author{Frank Meier Aeschbacher}
 \approved{Frank Meier Aeschbacher}
 \sopid{000}
@@ -144,13 +144,13 @@ See the resources section for links.
     \item BBM and complete modules are identified using the naming convention (see resources section).
     \item To identify an HDI (as of RevC), three numbers are required:
     \begin{itemize}
-	\item Work order (\texttt{AAANN} where \texttt{AAA} are alphanumeric digits, \texttt{NN} are numeric digits)
+	\item Work order (\texttt{AAABB} where \texttt{AAA} are alphanumeric digits, \texttt{BB} are numeric digits)
 	\item Date code (\texttt{WWYY} where \texttt{WW} is the week of the year and \texttt{YY} is the year)
-	\item Panel and position number (\texttt{NNMM} where \texttt{NN} is the panel number processed (add a leading zero if necessary) and \texttt{MM} is the position of the HDI on the panel)
+	\item Panel and position number (\texttt{NMM} where \texttt{N} is the panel number processed and \texttt{MM} is the position of the HDI on the panel)
     \end{itemize}
-    This makes up the following unique id for an HDI: \texttt{AAANN-WWYY-NNMM}
+    This makes up the following unique id for an HDI: \texttt{AAABB-WWYY-NMM}
 
-    Other information on an HDI can be safely disregarded. An example is given in Fig.~\ref{fig:HDI_SN}.
+    Other information on an HDI can be safely disregarded. An example for a RevD (RevC) HDI is given in Fig.~\ref{fig:HDI_SN_RevD} (Fig.~\ref{fig:HDI_SN_RevC}).
     \item A batch at UNL is identified using a six-digit number of the format \texttt{Nxxxyy} where
     \begin{itemize}
 	\item \texttt{N} identifies a batch number, N standing for Nebraska
@@ -166,16 +166,16 @@ See the resources section for links.
 \begin{figure}[hH]
     \begin{center}
         \includegraphics[width=7cm]{img/HDIRevD_id.png}
-        \caption{\textbf{Example to identify an HDI (RevD):} ID of this HDI would be \texttt{YHC69-1015-0311}, meaning work order \texttt{YHC69}, manufactured in week 10 of year 2015, third panel processed in this batch, and this is HDI from position 11 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
-        \label{fig:HDI_SN}
+        \caption{\textbf{Example to identify an HDI (RevD):} ID of this HDI would be \texttt{YHC69-1015-311}, meaning work order \texttt{YHC69}, manufactured in week 10 of year 2015, third panel processed in this batch, and this is HDI from position 11 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \label{fig:HDI_SN_RevD}
     \end{center}
 \end{figure}
 
 \begin{figure}[hH]
     \begin{center}
         \includegraphics[width=5cm]{img/HDI_SN.jpg}
-        \caption{\textbf{Example to identify an HDI (RevC):} ID of this HDI would be \texttt{YGU25-1814-0125}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
-        \label{fig:HDI_SN}
+        \caption{\textbf{Example to identify an HDI (RevC):} ID of this HDI would be \texttt{YGU25-1814-125}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \label{fig:HDI_SN_RevC}
     \end{center}
 \end{figure}
 
