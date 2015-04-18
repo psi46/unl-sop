@@ -141,32 +141,50 @@ See the resources section for links.
 
 \subsection{Identification of parts and batches}
 \begin{itemize}
-    \item BBM and complete modules are identified using the naming convention (see resources section).
-    \item To identify an HDI (as of RevC), three numbers are required:
-    \begin{itemize}
-	\item Work order (\texttt{AAABB} where \texttt{AAA} are alphanumeric digits, \texttt{BB} are numeric digits)
-	\item Date code (\texttt{WWYY} where \texttt{WW} is the week of the year and \texttt{YY} is the year)
-	\item Panel and position number (\texttt{NMM} where \texttt{N} is the panel number processed and \texttt{MM} is the position of the HDI on the panel)
-    \end{itemize}
-    This makes up the following unique id for an HDI: \texttt{AAABB-WWYY-NMM}
+    \item \textbf{BBM} are identified using the naming convention~\cite{BBMnaming}, which handles several cases. We have only the case of ``bump-bonded $2\times8$ modules'' this reduces to:
+        \begin{itemize}
+        \item XX, alway BLto designate ``bump-bonded $2\times8$ modules''
+        \item YY to designate the position on the wafer, see
+        \item ZZZ to match to wafer numbers. Preproduction sensors have the first digit alsways set to 9, followed by two numbers matching the wafer numbers. Production sensors use numbers in the range 001 to 200.
+        \end{itemize}
+
+    \item \textbf{HDI} are identify by four numbers that are assembled to one string:
+        \begin{itemize}
+        \item Work order (\texttt{AAABB} where \texttt{AAA} are alphanumeric digits, \texttt{BB} are numeric digits)
+        \item Date code (\texttt{WWYY} where \texttt{WW} is the week of the year and \texttt{YY} is the year)
+        \item Panel and position number (\texttt{NMM} where \texttt{N} is the panel number processed and \texttt{MM} is the position of the HDI on the panel)
+        \end{itemize}
+    This makes up the following unique id for an HDI: \texttt{AAABB-WWYY-N-MM}, example:~YHC69-1015-3-11
 
     Other information on an HDI can be safely disregarded. An example for a RevD (RevC) HDI is given in Fig.~\ref{fig:HDI_SN_RevD} (Fig.~\ref{fig:HDI_SN_RevC}).
+
+    NOTE: A reference to the final document will follow as soon as that reference exists.
+
     \item A batch at UNL is identified using a six-digit number of the format \texttt{Nxxxyy} where
-    \begin{itemize}
-	\item \texttt{N} identifies a batch number, N standing for Nebraska
-	\item \texttt{xxx} is a three-digit number with leading zeroes identifying the group of modules within the batch, \texttt{001} referring to the first batch etc.
-	\item \texttt{yy} is a two-digit number with leading zero identifying the individual modules inside a batch
-    \end{itemize}
+        \begin{itemize}
+        \item \texttt{N} identifies a batch number, N standing for Nebraska
+        \item \texttt{xxx} is a three-digit number with leading zeroes identifying the group of modules within the batch, \texttt{001} referring to the first batch etc.
+        \item \texttt{yy} is a two-digit number with leading zero identifying the individual modules inside a batch
+        \end{itemize}
     Example: \texttt{N00403} is module \texttt{03} of batch \texttt{004}
 
     The list of batch numbers is maintained in a spreadsheet, see the resources section.
+
     \item The HDI id is the final and official identifier. The batch number is for internal use by UNL for internal convenience. It allows to identify modules made within the same batch, share the same tools, and has an easier to communicate structure of only numbers plus one character.
 \end{itemize}
 
 \begin{figure}[hH]
     \begin{center}
+        \includegraphics[width=7cm]{img/SensorsWaferposPurdueconvention.png}
+        \caption{\textbf{Sensor wafer positions.} Wafer as seen from p-side. Numbers in parenthesis are the numbers used by the bump-bonding manufacturer, two-letter codes follow the Purdue-convention~\cite{BBMnaming}. Actual wafer layouts may differ, image shown as example.}
+        \label{fig:BBMwaferpos}
+    \end{center}
+\end{figure}
+
+\begin{figure}[hH]
+    \begin{center}
         \includegraphics[width=7cm]{img/HDIRevD_id.png}
-        \caption{\textbf{Example to identify an HDI (RevD):} ID of this HDI would be \texttt{YHC69-1015-311}, meaning work order \texttt{YHC69}, manufactured in week 10 of year 2015, third panel processed in this batch, and this is HDI from position 11 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \caption{\textbf{Example to identify an HDI (RevD):} ID of this HDI would be \texttt{YHC69-1015-3-11}, meaning work order \texttt{YHC69}, manufactured in week 10 of year 2015, third panel processed in this batch, and this is HDI from position 11 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
         \label{fig:HDI_SN_RevD}
     \end{center}
 \end{figure}
@@ -174,7 +192,7 @@ See the resources section for links.
 \begin{figure}[hH]
     \begin{center}
         \includegraphics[width=5cm]{img/HDI_SN.jpg}
-        \caption{\textbf{Example to identify an HDI (RevC):} ID of this HDI would be \texttt{YGU25-1814-125}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
+        \caption{\textbf{Example to identify an HDI (RevC):} ID of this HDI would be \texttt{YGU25-1814-1-25}, meaning work order \texttt{YGU25}, manufactured in week 18 of year 2014, first panel processed in this batch, and this is HDI from position 25 of that panel. All other information can be safely disregarded, especially the number \texttt{30598} (which is an internal cage code used by the manufacturer).}
         \label{fig:HDI_SN_RevC}
     \end{center}
 \end{figure}
@@ -207,6 +225,10 @@ URL listed below may change over time and do not necessarily trigger a new versi
     \item Naming convention: \url{https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12227}
     \item UNL module list: \url{http://cern.ch/go/H897}
 \end{itemize}
+\begin{thebibliography}{aaaaaaaa}
+    \bibitem{BBMnaming} \url{https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12227}
+    \bibitem{HDInaming} Reference to be added as soon as known
+\end{thebibliography}
 
 \end{document}
 
