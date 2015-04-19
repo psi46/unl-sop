@@ -59,7 +59,7 @@ Modules require an additional
     \item PVC squeegee, disposable
     \item Cleaning tools, consisting of brush and 2-Propanole; to clean glue from stamps and reservoir
     \item Felt tip marker, to write batch number on chuck
-    \item Vacuum tool to release BBM from GelPak (if BBM were delivered in GelPak)
+    \item Vacuum tool to release BBM from GelPak
 \end{itemize}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{img/gluingMaterials.jpg}
@@ -78,12 +78,17 @@ Note: the arrangement may vary as long as it matches the setup in the software
         \item Open LabView control software ``Glueing\_V\#(main)''  where $\#$ is the software version. In the Desktop, there is a shortcut to the ``routine'' directory; in there find the directory ``Glueing V\#''. Use the latest version. Record version.$$ \sim\backslash MyDocuments\backslash andres\backslash routine\backslash glueing\_V\#\backslash Glueing\_V\#(main)$$
         \item Check the controller and power supply are turned on.
     \end{enumerate}
-    \item Pick parts from storage and identify them. Handle bare modules only with proper protection: ESD wristband, gloves, face mask. Check that the parts satisfy the quality criteria by retrieving their information in the database.
+    \item Pick parts from storage (dry air cabinet) and identify them. Handle bare modules only with proper protection: ESD wristband, gloves, face mask. Check that the parts satisfy the quality criteria by retrieving their information in the database.
     \item Assign a new batch number (\texttt{Nxxx}) and assign a unique number (\texttt{Nxxxyy}) according to the rule described in \texttt{SOP~000}.
     \item Write the batch number to the BBM chuck on an edge for further identification.
-    \item Place the BBM on the chuck. Check if it(they) is(are) correctly aligned with the stencil.
-    \item Place the HDI on the chuck. Check if it(they) is(are) correctly aligned with the stencil.
-    \item Place at minimum the required number of stamp tools and weight tools on the respective chucks.
+    \item Repeat the following steps for the number of modules to be glued, as needed:
+    \begin{enumerate}
+        \item Remove clip from GelPak and place the GelPak onto the vacuum tool. Turn vacuum on. This allows the BBM to be removed with minimal force.
+        \item Place the BBM on the chuck. Check if it is correctly aligned with the stencil.
+        \item Place the HDI on the chuck. Check if it is correctly aligned with the stencil.
+        \item Place at minimum the required number of stamp tools and weight tools on the respective chucks.
+    \end{enumerate}
+    \item If the GelPaks became empty, mark them as used and put them in the non-dry air cabinet. Otherwise return to the dry air cabinet.
     \item Run the control sotfware $(Glueing\_V\#(main))$ and provide the information required in the pop-up windows:
     \begin{enumerate}
         \item Adjust configuration in software to reflect positions in use.
