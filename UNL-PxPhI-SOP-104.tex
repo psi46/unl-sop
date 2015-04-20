@@ -1,6 +1,6 @@
 \documentclass[12pt]{unlsilabsop}
 \title{Module assembly: Wirebonding of modules}
-\date{September 23, 2014}
+\date{April 20, 2015}
 \author{Frank Meier Aeschbacher}
 \approved{Frank Meier Aeschbacher}
 \sopid{104}
@@ -22,7 +22,7 @@ The wirebonds provide the electrical connections between the ROC and the HDI. Ad
 %>\section{Definitions}
 
 %------------------------------------------------------------------
-\section{Responsibilities}
+%\section{Responsibilities}
 
 %------------------------------------------------------------------
 \section{Equipment}
@@ -44,7 +44,7 @@ The wirebonds provide the electrical connections between the ROC and the HDI. Ad
 
 \subsection{Bonder setting}
 
-Table \ref{tbl:bondpar} lists the bond settings which have to be used by the operator. Whenever a range is given, the lower value is the normal condition. If the operator experiences problems in bonding to the HDI, the values may be increased within the given range. In any case, the settings need to be documented in the report and deviation from the normal settings need to be justified. Table \ref{tbl:otherpar} lists general machine settings to be used.
+Table \ref{tbl:bondpar} lists the bond settings which have to be used by the operator. Whenever a range is given, the lower value is the normal condition. If the operator experiences problems in bonding to the HDI, the values may be increased within the given range. In any case, the settings need to be documented in the report and deviation from the normal settings need to be justified. Table~\ref{tbl:otherpar} lists general machine settings to be used and table~\ref{tbl:DLCpar} lists the settings for the \emph{deformation limit control} (DLC) option.
 
 \begin{table*}[hH]
 \begin{center}
@@ -56,12 +56,12 @@ Table \ref{tbl:bondpar} lists the bond settings which have to be used by the ope
 \begin{tabular}{lc|cc|cc}
 \toprule
 Parameter & Unit & HDI & ROC & HV HDI & HV sensor \\
-\multicolumn{2}{l|}{Bond order} & 1 & 2 & 1 & 2 \\
+\multicolumn{2}{l|}{Bond order} & source & destination & source & destination \\
     \midrule
-US Time      &  ms    & 50         & 50 & 50         & 50  \\
-B-Force      &  cN    & 25\,--\,30  & 25 & 25\,--\,30  & 25 \\
-US Power     & digit  & 95\,--\,155 & 95 & 95\,--\,155 & 95 \\
-TD Steps     & $\mu$m & 10\,--\,15  & 10 & 10\,--\,15  & 10 \\
+US Time      &  ms    &  25 &  25 &  25 &  25 \\
+B-Force      &  cN    &  30 &  30 &  30 &  30 \\
+US Power     & digit  & 140 & 110 & 140 & 110 \\
+TD Steps     & $\mu$m &  12 &  12 &  12 &  12 \\
     \midrule
 Z-Presign    & \%     & \multicolumn{2}{|c|}{80} & \multicolumn{2}{|c}{80} \\
 Loop Height  & $\mu$m & \multicolumn{2}{|c|}{0 } & \multicolumn{2}{|c}{0 } \\
@@ -98,7 +98,30 @@ Adjust Mode        & --     & 1 \\
 Bond Mode          & --     & 0 \\
 Monitoring Mode    & --     & 0 \\
 \midrule
-Motor Z max        & $\mu$m & 40800 \\
+Motor Z max        & $\mu$m & 40700 \\
+\midrule
+    \bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+
+\begin{table*}[hH]
+\begin{center}
+\caption{Deformation limit control parameters}
+\label{tbl:DLCpar}
+
+\bigskip
+
+\begin{tabular}{lcc}
+\toprule
+Parameter                & Unit   & Value \\
+\midrule
+Max. deform. source      & $\mu$m & 20 \\
+Min. deform. source      & $\mu$m & 10 \\
+Max. deform. destination & $\mu$m & 20 \\
+Min. deform. destination & $\mu$m & 10 \\
+Scale Y                  & $\mu$m & 30 \\
+Scale X                  & $\mu$m & 30 \\
     \bottomrule
 \end{tabular}
 \end{center}
@@ -113,36 +136,44 @@ The procedure below describes the steps for bonding one module. The chuck provid
     \item If not already mounted: Mount the bond head following the manual
     \item Perform a readiness check of the wirebonder:
     \begin{enumerate}
-	\item Check if bond wire feeds. If in doubt, re-feed wire according to manual.
-	\item If bonding for the first time this day: Make a manual test bond on a coupon. Add this to your report.
-	\item Check if vacuum is present by reading the gauge. If not, perform the following checks: vacuum pump is on (outside cleanroom), valve is open.
+        \item Check if bond wire feeds. If in doubt, re-feed wire according to manual.
+        \item If bonding for the first time this day: Make a manual test bond on a coupon. Add this to your report.
+        \item Check if vacuum is present by reading the gauge. If not, perform the following checks: vacuum pump is on (outside cleanroom), valve is open.
     \end{enumerate}
     \item Depending on how modules were received, proceed either way:
     \begin{enumerate}
-	\item Module handed over on chuck from glueing: Take note of placement of modules for verification.
-	\item Bonding of individual modules: Pick modules from storage and identify them (HDI S/N and UNL batch no.). Place them on a chuck, take note which module is placed in with location.
+        \item Module handed over on chuck from glueing (preferred): Take note of placement of modules for verification.
+        \item Bonding of individual modules: Pick modules from storage and identify them (HDI S/N and UNL batch no.). Place them on a chuck, take note which module is placed in with location.
     \end{enumerate}
-    \item Check that the parts satisfy the quality criteria by retrieving their information in the database. 
+    \item Check that the parts satisfy the quality criteria by retrieving their information in the Purdue database. To do this, select ``Assembly Status'' and then on the link ``HDI Attached'' within the ``Modules'' table. Look for the modules your are going to wirebond. They should be listed there.
     \item Visually inspect all modules for any possible issues:
     \begin{itemize}
-	\item bond pads on HDI and ROC are clean
-	\item HV bond pad on sensor is clean and accessible for the bond head
+        \item bond pads on HDI and ROC are clean
+        \item HV bond pad on sensor is clean and accessible for the bond head
     \end{itemize}
-    \item Record the HDI S/N and UNL batch id (\texttt{Nxxxyy}) for each module.
     \item Load the bond program named TODO: insert correct program name
     \item Run alignment step.
-    \item Run program. Supervise progress and stop in need, especially when modules are at risk or wirebonds are continuously missing. No stop needed for an occasional miss.
+    \item Run program. Enter the module Id and the UNL batch Id (\texttt{Nxxxyy}) you are going to bond next. Supervise progress and stop in need, especially when modules are at risk or wirebonds are continuously missing. No stop needed for an occasional miss.
     \item At the end of the full cycle, check visually if all wirebonds are present. Rebond any missing bonds.
+    \item While still on the bonder, connect the flex cable from the test setup. Run pXar and perform the following tests (no HV needed for this test):
+    \begin{itemize}
+        \item Upon startup, check that the currents are within limits: $I_A\in[0.37,0.39]\,$A, $I_D\in[0.47,0.49]\,$A
+        \item Select the ``Pretest'' tab and run all tests. All modules should be programmable.
+        \item Select the ``PixelAlive'' tab and run all tests. Check the pixel map. All ROC should show some results. If pixels at the edge show low entries, this is due to the missing HV and can be safely disregarded.
+    \end{itemize}
+    Disconnect the cable and proceed.
     \item Depending on how the production was planned, proceed either way:
     \begin{itemize}
-	\item Encapsulation imminent or foreseen in the next days: Keep modules on chuck and put to intermediate storage
-	\item Functional test required immediately, encapsulation postponed, or not required: Remove modules from chuck and place on module carriers. If testing is the next step, attach a flex cable.
+        \item Regular case: Encapsulation imminent or foreseen in the next days: Keep modules on chuck and put to intermediate storage
+        \item Special case: Encapsulation postponed, or not required: Remove modules from chuck and place on module carriers. If testing is the next step, attach a flex cable.
     \end{itemize}
 \end{enumerate}
 
 %------------------------------------------------------------------
 \section{Documentation}
-The following information needs to be recorded in the report for the UNL logbook:
+For any module successfully bonded and passed the tests, select the module in the database and click on ``Update status''. Check the checkbox ``Wirebonded'' and enter your name. In the comments-field, enter the batch number of the wire used.
+
+Only if there are some special observations add a report to the elog:
 \begin{itemize}
     \item Date, time (start--end) and operator name
     \item Wirebonder software: version
@@ -150,9 +181,7 @@ The following information needs to be recorded in the report for the UNL logbook
     \item Batch number and expiration date of wire
     \item Any special observations, e.g.~damage to parts not already recorded during visual inspection, deviations from normal procedures
 \end{itemize}
-A template document to fill in is provided on the TWiki page and may be used as guidance.
 
-Purdue database: Status of BBM and HDI need to be updated.
 
 %------------------------------------------------------------------
 \section{References}
