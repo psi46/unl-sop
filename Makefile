@@ -2831,9 +2831,9 @@ endif
 	$(QUIET)$(call echo-graphic,$^,$@)
 	$(QUIET)$(call convert-fig,$<,$@,$(GRAY))
 
-%.pdf:	%.svg
-	$(QUIET)$(call echo-graphic,$^,$@)
-	$(QUIET)$(call convert-svg,$<,$@,$(GRAY))
+#%.pdf:	%.svg
+#	$(QUIET)$(call echo-graphic,$^,$@)
+#	$(QUIET)$(call convert-svg,$<,$@,$(GRAY))
 endif
 
 ifeq "$(strip $(BUILD_STRATEGY))" "xelatex"
