@@ -169,6 +169,14 @@ The procedure below describes the steps for bonding one module. The chuck provid
     \end{itemize}
 \end{enumerate}
 
+\subsection{Exception handling}
+The bonding procedure may not run through smoothly. The following list instructs how to deal with exceptions:
+\begin{itemize}
+    \item \textbf{Missed wire:} Bonder should normally detect this via the \emph{deformation limit control} and halt the program. Inspect the area. Remove any wire debris with tweezers. Retry bonding. If still unsuccessful, skip wire and proceed. Handle issue later.
+    \item \textbf{Missed wire in HV area:} If wire debris needs to be removed, take extra care to not leave scratches or create any other damage on the sensor. Try bonding in step-mode. Watch the bonding process in the microscope. If flexing of the HDI is observed and step-mode doesn't help, manual underfilling with glue between sensor and HDI may be required. See SOP-107 (Reworking) for further instructions.
+    \item \textbf{Handling of skipped wires:} If immediate re-bonding was unsuccessful, retry bonding in manual mode. If missed bond was on HDI side (most common failure mode), try re-targeting the bond. First try shifting the bond target outwards (i.e.~towards edge of HDI). If this doesn't work, try shifting the bond inwards. In the latter case, make an explicit remark in the database and mark the module on the chuck with a red Post-It bookmark. Reason: Such modules need special handling in the encapsulation step.
+\end{itemize}
+
 %------------------------------------------------------------------
 \section{Documentation}
 For any module successfully bonded and passed the tests, select the module in the database and click on ``Update status''. Check the checkbox ``Wirebonded'' and enter your name. In the comments-field, enter the batch number of the wire used.
