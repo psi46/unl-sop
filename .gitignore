@@ -5,3 +5,7 @@
 *.log
 *.out
 .DS_Store
+*.make
+*.d
+*.fls
+*.temp
