@@ -31,5 +31,5 @@ Some SOP come with a txt-file, which should be used to document the work done us
 
 Signed-off documents
 --------------------
-The signed-off versions of the SOP are available [in DocDB](https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12623). Annotated links are [on a on a TWikii](https://twiki.cern.ch/twiki/bin/view/CMS/UNLPixelPhaseI "TWiki page hosted at Cern").
+The signed-off versions of the SOP are available [in DocDB](https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12623). Annotated links are [on a on a TWiki](https://twiki.cern.ch/twiki/bin/view/CMS/UNLPixelPhaseI "TWiki page hosted at Cern").
 
