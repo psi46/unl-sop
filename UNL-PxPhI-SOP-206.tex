@@ -29,7 +29,7 @@ The electrical acceptance test of final modules is a critical step in manufactur
 
 \begin{itemize}
 \item \textbf{Cold box} 
-\item \textbf{DTB with adapter cards} 4 each, adapter cards connected via SCSI ribbon cable. Power brick connected. All 4 connected to the computer via separate USB cables. Do not use a USB hub unless you are sure it works.
+\item \textbf{DTB with adapter cards} 4 each, adapter cards connected via SCSI ribbon cable. Power brick connected. All 4 connected to the computer via separate USB cables. Do not use a USB hub unless you are sure it works. 4 HV cables connected to the Keithly power supply. Only power up a DTB if it will be used.
 \item \textbf{Computer} A Linux or Mac~OS~X based computer with pXar, ElCommandante and MoReWeb installed.
 \item \textbf{Chiller} TODO: Add model
 \item \textbf{Dry air supply} TODO: Add model
@@ -56,9 +56,12 @@ The electrical acceptance test of final modules is a critical step in manufactur
         \item Close the lid. Make sure the cables lie flat and the lid makes a good seal.
     \end{itemize}
     \item Run the IV test.
-
-        TODO: explain steps
+		\item Generate the configuration files
+        Go to data subfolder and do:
+        \&& 
     \item Run the \emph{full test} using ElCommandante
+    \item Run MoReWeb Software.
+    		\item 
     \item Document any findings. Upload the following results to the Purdue database:
 \end{enumerate}
 
