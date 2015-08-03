@@ -25,7 +25,7 @@ Wirebonds should receive protection by applying an encapsulant. This is the fina
 %>\section{Definitions}
 
 %------------------------------------------------------------------
-\section{Responsibilities}
+%\section{Responsibilities}
 
 %------------------------------------------------------------------
 \section{Equipment}
@@ -40,7 +40,7 @@ Wirebonds should receive protection by applying an encapsulant. This is the fina
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=\textwidth]{img/potting_reference.jpg}
-    \caption{ROC-HDI encapsulation sample for comparison, all the bond foots and pads are fully covered as needed.}
+    \caption{ROC-HDI encapsulation sample for comparison, all the bond foots and pads are fully covered as needed. The boundaries of the encapsulant enhanced with red lines for better visibility.}
     \label{fig:potting_reference}
   \end{center}
 \end{figure}
@@ -57,14 +57,14 @@ Wirebonds should receive protection by applying an encapsulant. This is the fina
     \item Gantry
     \item Nordson ESD Ultumus I dispenser
     \item Chucks equipped with carrier chucks for modules
-    \item Sylguard 186 two-component encapsulant. Consists of erastomer base and elastomer curing agent.
+    \item Encapsulant: Sylguard 186 two-component encapsulant. Consists of erastomer base and elastomer curing agent.
     \item Test tube to mix encapsulant
     \item Electronic scale.
     \item Spatula
     \item Disposable syringes for measuring volumes: 1\,cc size for curing agent and 10\,cc size for base
-    \item Disposable syringe for dispenser, 5\,cc size, Nordson ESD, part no.7012094
+    \item Disposable syringe for dispenser, 5\,cc size, Nordson ESD, part no.~7012094
     \item Dispenser needle, color code: lavender, Nordson ESD part no. 7018433
-    \item Disposable end cap for syringe, 5\,cc size, Nordson ESD, part no.7012192
+    \item Disposable end cap for syringe, 5\,cc size, Nordson ESD, part no.~7012192
     \item Centrifuge
     \item Polyimide sheets, to cover chuck positions if not running a full batch of 4 modules
     \item Felt tip marker, to write batch number on chuck
@@ -87,13 +87,13 @@ The procedure below is good for encapsulation of a larger number of modules than
        \item Pick modules from storage and identify them. Check that the parts satisfy the quality criteria by retrieving their information in the database. \label{enum:startenacpulation}
     \item Record the UNL id (\texttt{Nxxxyy}) for each module. Write down the number on the edge of the chuck for further identification.
     \end{enumerate}
-  \item Run the LabVIEW control software. Supervise progress and stop in need, especially when modules are at risk.Some pop-up windows will appears asking for information:
+  \item Run the LabVIEW control software. Supervise progress and stop in need, especially when modules are at risk. Some pop-up windows will appears asking for information:
     \begin{enumerate}
     \item is the vacuum active?
     \item distribution to be used (spots in use).  
     \item modules identification.  
     \end{enumerate}
-  \item Run pattern recognition step by pressing the `` 1. Find potting reference positions'' button. (The camera will go through the HDI's potting positions and then through the modules potting positions)
+  \item Run pattern recognition step by pressing the ``1.~Find potting reference positions'' button. (The camera will go through the HDI's potting positions and then through the modules potting positions)
     \begin{enumerate}
     \item Select the configuration to be used: test$\to$ testing purpose; HDIV3 + module $\to$ module encapsulation (wait 30 seconds while the program is loading some data). 
     \item First part is the fiducial recognition: for every single fiducial, check if location found is sound. After go through the 4 fiducials a pop-up window will ask if any of the found positions needs to be corrected. If the fiducial is not found, the manual mode becomes active, use the joystick to define the fiducial position. The manual mode is accesible anytime by pressing the ``switch to manual mode'' button.   
@@ -105,8 +105,8 @@ The procedure below is good for encapsulation of a larger number of modules than
         \item Check expiration date of both ingredients. Replace if expired.
 	\item Record batch number and expiration date of encapsulant.
         \item put a piece of paper on the electronic scale an adjust the zero.
-	\item Take $\approx$ 0.3\,cc of curing agent using the 1\,cc syringe and deposit 0.3 g on the paper in the scale. Adjust the zero again 
-        \item Take $\approx$ 3.0\,cc of base elastomer using the 10\,cc sysringe and deposit 3.48 g on the paper in the scale. Take the paper from the scale and mix the ingredients
+	\item Take $\approx$ 0.3\,cc of curing agent using the 1\,cc syringe and deposit 0.3\,g on the paper in the scale. Adjust the zero again 
+        \item Take $\approx$ 3.0\,cc of base elastomer using the 10\,cc sysringe and deposit 3.48\,g on the paper in the scale. Take the paper from the scale and mix the ingredients
         \item Transfer the mixture to the dispenser syringe (dont forget to use the end cap).  
 	\item Fill another test tube with water
 	\item Place both tubes in centrifuge at opposite location to balance rotor.
@@ -115,14 +115,14 @@ The procedure below is good for encapsulation of a larger number of modules than
     \end{enumerate}
     \item Attach tube to syringe and insert syringe into holder at gantry head (end cap has to be removed).
     \item Install the needle.
-    \item Run the Encapsulation by pressing the ``2.Encapsulation'' button. a pop-up window will ask you for install the syringe into the holder which should be already done.
+    \item Run the Encapsulation by pressing the ``2.~Encapsulation'' button. a pop-up window will ask you for install the syringe into the holder which should be already done.
     \item proceed to determine (calibrate) the position of the needle tip. A pop-up window will appears showing the image from the camera 2 in the webcam setup. Use the joystick to move the gantry until the needle tip is in the center of the screen (the center of the needle tip coincides with the red cross in the screen), then switch to camera 3 and repeat the process, once the needle tip is in the center of both images (from cameras 2 and 3) press the button ``calibrate''.
     \item Purge the syringe by pressing the ``Purge'' button (as requested by the pop-up window).
     \item Start the encapsulation by pressing the button ``start potting''. A control will appears asking for uncheck the irregular wirebonds or the sylgard traces that must be skipped.     
     \item At the end of the full cycle, check visually if all wirebond foots are covered as needed (see fig. \ref{fig:potting_reference} for reference); record observations in the comments box.
     \item Write comments and press the ``send comments'' button to finish the step. 
     \item Press the ``Finish'' button, a pop-up window will ask for final-additional comments.
-    \item press the `` create report and finish'' button to create the report. provide the required information and press send.
+    \item press the ``create report and finish'' button to create the report. provide the required information and press send.
       \item To correct for any missing encapsulant run again the program, define the new potting reference positions as needed and check only the traces that needs to be corrected. record such special action in the comments box.
     \item Transfer chuck to curing oven. Run the program until finished.
     \item Finished modules shall not be handled for at least 2~hours.
@@ -142,7 +142,7 @@ The following information needs to be recorded in the report for the UNL logbook
     \item Any special observations, e.g.~damage to parts not already recorded during visual inspection, deviations from normal procedures
 \end{itemize}
 
-Find the report at $\sim\backslash MyDocuments\backslash andres\backslash routine\backslash reports$. Any special observations, e.g. damage to parts not already recorded during visual inspection, deviations from normal procedures, can be added to the report, just open it and add the info. Publish it in the UNL logbook. 
+Find the report at $\sim\backslash MyDocuments\backslash andres\backslash routine\backslash reports$. Any special observations, e.g.~damage to parts not already recorded during visual inspection, deviations from normal procedures, can be added to the report, just open it and add the info. Publish it in the UNL logbook. 
 Purdue database: Status of BBM and HDI need to be updated.
 
 \end{document}
