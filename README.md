@@ -21,11 +21,15 @@ make clean
 ```
 This will delete all intermediate files but keeps the pdf's.
 
+Images
+------
+The images are either plain jpg (for photos) or png (for drawings). In some cases the source files are present as well. Most of the drawings were made using Inkscape, which allows for a PDF export.
+
 Documentation templates
 -----------------------
 Some SOP come with a txt-file, which should be used to document the work done using that SOP. Use them as a template in an editor of your choice and upload it to the elog.
 
 Signed-off documents
 --------------------
-The signed-off versions of the SOP are available [here](https://twiki.cern.ch/twiki/bin/view/CMS/UNLPixelPhaseI "TWiki page hosted at Cern").
+The signed-off versions of the SOP are available [in DocDB](https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12623). Annotated links are [on a on a TWikii](https://twiki.cern.ch/twiki/bin/view/CMS/UNLPixelPhaseI "TWiki page hosted at Cern").
 
