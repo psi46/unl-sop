@@ -1,0 +1,72 @@
+\documentclass[12pt]{unlsilabsop}
+\title{Electrical acceptance test of assembled modules}
+\date{August 3, 2015}
+\author{Frank Meier Aeschbacher}
+\approved{Frank Meier Aeschbacher}
+\sopid{206}
+\sopversion{v0}
+\sopabstract{Describes the procedures for the electrical test of final modules. This consists of taking the IV curve and running a so-called \emph{full test} with the standardized test software. Any deviations from normal appearance will be documented.}
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------
+\section{Scope}
+This is a regular test in the manufacturing process of pixel modules at UNL.
+
+%------------------------------------------------------------------
+\section{Purpose}
+The electrical acceptance test of final modules is a critical step in manufacturing modules. This test is a critical control point to make sure the material we send out meets expectations and to ensure the quality.
+
+%------------------------------------------------------------------
+%>\section{Definitions}
+
+%------------------------------------------------------------------
+%\section{Responsibilities}
+
+%------------------------------------------------------------------
+\section{Equipment}
+
+\begin{itemize}
+\item \textbf{Cold box} 
+\item \textbf{DTB with adapter cards} 4 each, adapter cards connected via SCSI ribbon cable. Power brick connected. All 4 connected to the computer via separate USB cables. Do not use a USB hub unless you are sure it works.
+\item \textbf{Computer} A Linux or Mac~OS~X based computer with pXar, ElCommandante and MoReWeb installed.
+\item \textbf{Chiller} TODO: Add model
+\item \textbf{Dry air supply} TODO: Add model
+\item \textbf{HV power supply} Keithly model 2410, connected to the same computer through a USB to RS232 adapter
+\end{itemize}
+
+%------------------------------------------------------------------
+\section{Procedure}
+
+\begin{enumerate}
+    \item Handle modules only with proper protection: ESD wristband, gloves, face mask.
+    \item Make sure the supplies are running:
+    \begin{itemize}
+        \item Chilled water: The chiller needs to be turned on and set to a temperature of XXX$^\circ$C. Water flow set to XXX\,gal/min.
+        \item Dry air: The main valve needs to be open and set to XX\,psi.
+        \item All DTB connected to power and LED indicate they are powered.
+    \end{itemize}
+    \item Turn the cold box on and set it to a temperature of 17$^\circ$C. The temperature need to be stable before running module tests.
+    \item Place the modules on the cold box. For this, do:
+    \begin{itemize}
+        \item Open the lid. The sample area needs to be clean, no dust or dirt visible on cold plate.
+        \item Place up to four modules on theit carriers using the positioner pins.
+        \item Connect the cable to the adapter cards on the cold box.
+        \item Close the lid. Make sure the cables lie flat and the lid makes a good seal.
+    \end{itemize}
+    \item Run the IV test.
+
+        TODO: explain steps
+    \item Run the \emph{full test} using ElCommandante
+    \item Document any findings. Upload the following results to the Purdue database:
+\end{enumerate}
+
+%------------------------------------------------------------------
+\section{Documentation}
+If a module passes the tests, a status update in the database needed. Go to ``MAIN MENU''$\rightarrow$``Part List'' and select your module. Upload any pictures as needed and add comments as needed.
+
+No need to make an entry in the Elog if nothing special happened.
+
+\end{document}
+
