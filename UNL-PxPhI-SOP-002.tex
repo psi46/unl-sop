@@ -35,13 +35,12 @@ The gantry code comprises of proprietary software and custom code in LabView, Vi
     \item \textbf{LabView code.} The code is stored in a \texttt{git} repository, regularly replicated to \url{https://git.unl.edu/jmonroy2/glueing}. This includes the pattern recognition part, written in-house in C++. Recovery requires a clone of that repository plus configuration work.
     \item \textbf{Data.} Logfiles are kept locally, no backup foreseen so far.
 \end{itemize}
-TODO: This covers glueing only. Where is the potting code stored?
 
 \subsection{Wirebonder}
 The wirebonder is operated by a PC running Windows XP embedded into the machine. The software is unavailable on more recent versions of Windows. For security reasons, no network access is allowed. All backup and transfer of user data has to make use of a USB thumb drive.
 \begin{itemize}
-    \item \textbf{Bond programs.} These programs are custom to accommodate our modules. TODO: Establish rule how this is transferred and stored. Preferrably to git.unl.edu like all the other stuff.
-    \item \textbf{Machine configuration.} This cannot be stored in a better way than as screenshots. TODO: Add this to the rep of bond programs or put it on th eUNL wirebonding TWiki.
+    \item \textbf{Bond programs.} These programs are custom to accommodate our modules. A backup gets stored on the USB thumbdrive that is placed by the bonder.
+    \item \textbf{Machine configuration.} This cannot be stored in a better way than as screenshots. They get stored on the USB thumbdrive as well.
     \item \textbf{Logfiles.} Logfiles are kept locally, no backup foreseen so far.
     \item \textbf{Data.} Mostly test results from pull tests. Need to be transferred using a USB thumbdrive.
 \end{itemize}
@@ -50,9 +49,9 @@ The wirebonder is operated by a PC running Windows XP embedded into the machine.
 Test stands operate software developed by the CMS pixel community (\texttt{pXar}, \texttt{ElCommandante}, \texttt{psi46test}) using DTB and in one case control the cold box.
 \begin{itemize}
     \item \textbf{Source code.} All source code is available for download on \texttt{https://github.com/psi46} and can be compiled according to instructions available at \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/Psi46}.
-    \item \textbf{Configuration.} Any special configuration needs to be documented, preferrably inside the colection of UNL TWiki pages TODO: Discuss this
+    \item \textbf{Configuration.} Configurations are mandated by Fermilab and maintained in the relevant github repositories (see TWiki).
     \item \textbf{Logfiles.} Logfiles are kept locally, no backup foreseen so far.
-    \item \textbf{Data.} TODO: How do we store this stuff? Using moreweb (like BPix and Purdue)? Database?
+    \item \textbf{Data.} Some data gets stored on the Purdue database (see SOP~206), the full test gets stored locally. No backup foreseen as this data is regarded as intermediate and the final calibration will be done at Fermilab.
 \end{itemize}
 
 \subsection{UNLHEP electronic logbook}
