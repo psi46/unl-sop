@@ -63,7 +63,7 @@ The electrical acceptance test of final modules is a critical step in manufactur
 		\$\$ $cd pxar/data$
 		\$\$ ../main/mkConfig -d defaultparameters -t tbmtype -r roctype -m -f -p \textsc{\char13}s/hubId 31/hubId 15 	\textsc{\char13}/
 		\item Go to $elComandante/config$ folder and open elComandante.ini and elComandante.conf files. The first file contains information about the modules that are going to be tested and which DTB are going to be used. Set the module name with its corresponding DTB. Also make sure keithley and coldbox are set to True and lowvoltage and xray are set to false. At the end of the file include a test description according to the test you are about to do. Finally, indicated which tests are going to be done. For a complete full qualification of the module the tests are: IV\at 17,Pretest{\at}17$>$\{Fulltest\at 17\}\\
-		The second file has information about paths and ports. Set the jumo client and the Keithley client to the correct ports, ttyUSB0 and ttyUSB1, watch for any changes. Make sure each DTB has the correct name and specify the path for the configuration files(as set above). Finally check the directory where the pxar executable is, normally it is at pxar/bin/pXar.
+		The second file has information about paths and ports. Set the jumo client and the Keithley client to the correct ports, ttyUSB0 and ttyUSB1, watch for any changes (Normally a port's name changes every time you plug a different device in a port). Make sure each DTB has the correct name and specify the path for the configuration files(as set above). Finally check the directory where the pxar executable is, normally it is at pxar/bin/pXar.
 		\item Run elComandante
 		\begin{itemize}
 			\item \$\$ cd ../elComandante
