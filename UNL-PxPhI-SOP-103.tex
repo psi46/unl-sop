@@ -1,6 +1,6 @@
 \documentclass[12pt]{unlsilabsop}
 \title{Module assembly: Gluing of HDI to BBM}
-\date{August 6, 2015}
+\date{September 24, 2015}
 \author{Frank Meier Aeschbacher and José Monroy}
 \approved{Frank Meier Aeschbacher}
 \sopid{103}
@@ -18,7 +18,7 @@ This is a regular part in the manufacturing process of pixel modules at UNL.
 
 %------------------------------------------------------------------
 \section{Purpose}
-Modules require an additional
+Modules (Sensor + ROCs = BBM) require an additional part to manage the data coming from the sensor; this part, called HDI (High Density Interconect), contains the Token Bit Manager (TBM) and is wired to the ROCs in order to gather and address the data.xs.   
 
 %------------------------------------------------------------------
 \section{Definitions}
@@ -31,14 +31,17 @@ Modules require an additional
   \item HDIV2 + module: for manufacturing modules using HDI V2 (rev B). May be adapted to a new HDI version.
   \item HDIV3 + module: for manufacturing modules using HDI V3 (rev C). May be adapted to a new HDI version.
   \end{enumerate}
-\item Fiducials: Reference marks used to define the orientation of the HDI's, modules and tools. Each element have 4 fiducials. 
-\item Front panel: It is the window through which the user interact with the software. It show statistical information , status of the vacuum system, tools and elements in use and other information. Some features are:
+\item Fiducials: Reference marks used to define the orientation of the HDIs, modules and tools. Each element has 4 fiducials. 
+\item Front panel: It is the window through which the user interact with the software. It show statistical information, status of the vacuum system, tools and elements in use and other information. Some features are:
   \begin{enumerate}
-    \item In the main front panel only two step buttons are enabled at a time: the step button and the finish button. 
-    \item Each step have its own front panel. Once the step button is pressed the corresponding front panel appears as a pop-up window and the main front panel becomes locked.
+    \item In the main front panel only two step buttons are enabled at a time: the ``step'' button and the finish button. 
+    \item Each step has its own front panel. Once the step button is pressed the corresponding front panel appears as a pop-up window and the main front panel becomes locked.
     \item Several pop-up windows appears along the glueing process asking for user inputs, follow the instructions given and/or provide the information needed.
+    \item We use 4 elements in the gluing process: Modules (BBM), HDI (HDI), stamp tools (ST) and weight tools (WT). We use the labels in parenthesis to name these elements. We have 4 slots for BBM, 4 slots for HDI, 4 ST (ST1,ST2,...ST4) and 16 WT (WT1, WT2,......WT16). Eventually there will be a pop up window asking for the elements to be used and the mentioned convention is used to identify them.    
   \end{enumerate}
 \end{itemize}
+
+
 
 %------------------------------------------------------------------
 %\section{Responsibilities}
@@ -46,23 +49,32 @@ Modules require an additional
 %------------------------------------------------------------------
 \section{Equipment}
 \begin{center}
-\includegraphics{img/gluingSetup.jpg}
+\begin{figure}[h]
+\includegraphics[width=0.9\textwidth]{img/gantryFull16labeled.jpg}
+\caption{Gantry setup. Labels indicate the main parts of the setup.}
+\label{gantry_setup}
+\end{figure}
 \end{center}
 
 \begin{itemize}
     \item Gantry
-    \item Tools placed on rack: grabber and picker tool
-    \item Chucks equipped carrier chucks for BBM, HDI, glue reservoir, stamp tools, and weight tools
+    \item Tools placed on rack: grabber and picker tool (not labeled in the figure  \ref{gantry_setup})
+    \item Chucks equipped carrier chucks for BBM, HDI, glue reservoir, stamp tools (ST), and weight tools (WT)
     \item Araldite
     \item Post-It notes, used as surface to mix Araldite
-    \item Spatula
+    \item Metallic spatula
     \item PVC squeegee, disposable
     \item Cleaning tools, consisting of brush and 2-Propanole; to clean glue from stamps and reservoir
     \item Felt tip marker, to write batch number on chuck
     \item Vacuum tool to release BBM from GelPak
 \end{itemize}
+
 \begin{center}
+\begin{figure}[h]
 \includegraphics[width=0.9\textwidth]{img/gluingMaterials.jpg}
+\caption{Materials used in the gluing process. These materials are located on the Gantry table, except for the cleaning materials which are located by the sink outside the clean room.}
+\label{materials}
+\end{figure}
 \end{center}
 
 
@@ -81,21 +93,24 @@ Note: the arrangement may vary as long as it matches the setup in the software
     \item Pick parts from storage (dry air cabinet) and identify them. Handle bare modules only with proper protection: ESD wristband, gloves, face mask. Check that the parts satisfy the quality criteria by retrieving their information in the database.
     \item Assign a new batch number (\texttt{Nxxx}) and assign a unique number (\texttt{Nxxxyy}) according to the rule described in \texttt{SOP~000}.
     \item Write the batch number to the BBM chuck on an edge for further identification.
+    \item Open and run the LabView program `` vacuum manifold'' located at $$ \sim\backslash MyDocuments\backslash andres\backslash routine\backslash vacuum_manifold.vi$$
+    \item Unplug the vacuum line connected to the glue reservoir chuck and plug it to the vacuum tool. 
     \item Repeat the following steps for the number of modules to be glued, as needed:
     \begin{enumerate}
-        \item Remove clip from GelPak and place the GelPak onto the vacuum tool. Turn vacuum on. This allows the BBM to be removed with minimal force.
+        \item Remove clip from GelPak and place the GelPak onto the vacuum tool. Turn vacuum line \# 14 on. This allows the BBM to be removed with minimal force.
         \item Place the BBM on the chuck. Check if it is correctly aligned with the stencil.
         \item Place the HDI on the chuck. Check if it is correctly aligned with the stencil.
         \item Place at minimum the required number of stamp tools and weight tools on the respective chucks.
     \end{enumerate}
     \item If the GelPaks became empty, mark them as used and put them in the non-dry air cabinet. Otherwise return to the dry air cabinet.
+    \item Plug back the vacuum line to the glue reservoir chuck.
     \item Run the control sotfware $(Glueing\_V\#(main))$ and provide the information required in the pop-up windows:
     \begin{enumerate}
         \item Adjust configuration in software to reflect positions in use.
         \item identification of the HDI's and modules.
     \end{enumerate}
-    Supervise progress and stop if needed (using the RED stop button in the joystick), especially when modules are at risk.
-    \item Run pattern recognition step (find fiducials button). Check if locations found are sound (statistical information in the front panel must be used for this purpose). The image showed as template gives an idea of what to look for. 
+    \item Run pattern recognition step (find fiducials button). Check if locations found are sound (statistical information in the front panel must be used for this purpose). The image showed as template gives an idea of what to look for. \\\\ 
+      Supervise progress and stop if needed (using the RED stop button in the joystick), especially when modules are at risk.
     \item Prepare Araldite:
     \begin{enumerate}
         \item Record batch number of Araldite.
@@ -140,7 +155,7 @@ The following information is recorded in the report generated by the glueing sof
 	\end{itemize}
 \end{itemize}
 
-Find the report at $\sim\backslash MyDocuments\backslash andres\backslash routine\backslash reports$. Any special observations, e.g. damage to parts not already recorded during visual inspection, deviations from normal procedures, can be added to the report, just open it  and add the info. Publish it in the UNL logbook. 
+Find the report at $\sim\backslash MyDocuments\backslash andres\backslash routine\backslash reports$. Any special observations, e.g. damage to parts not already recorded during visual inspection, deviations from normal procedures, can be added to the report, just open it  and add the info. Publish it in the UNL elog. 
 
 \end{document}
 
