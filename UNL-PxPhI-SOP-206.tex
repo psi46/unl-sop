@@ -1,10 +1,10 @@
 \documentclass[12pt]{unlsilabsop}
 \title{Electrical acceptance test of assembled modules}
-\date{August 3, 2015}
-\author{Frank Meier Aeschbacher}
-\approved{Frank Meier Aeschbacher}
+\date{February 5, 2016}
+\author{Joaquin Siado}
+\approved{Rachel Bartek}
 \sopid{206}
-\sopversion{v0}
+\sopversion{v1}
 \sopabstract{Describes the procedures for the electrical test of final modules. This consists of taking the IV curve and running a so-called \emph{full test} with the standardized test software. Any deviations from normal appearance will be documented.}
 \newcommand{\at}{\makeatletter @\makeatother}
 \begin{document}
@@ -33,7 +33,7 @@ The electrical acceptance test of final modules is a critical step in manufactur
 \item \textbf{DTB with adapter cards} 4 each, adapter cards connected via SCSI ribbon cable. Power brick connected. All 4 connected to the computer via separate USB cables. Do not use a USB hub unless you are sure it works. 4 HV cables connected to the Keithly power supply. Power up a DTB only if it will be used.
 \item \textbf{Computer} A Linux or Mac~OS~X based computer with pXar, ElCommandante and MoReWeb installed.
 \item \textbf{Chiller} Model RC045, Serie J03
-\item \textbf{Dry air supply} TODO: Add model
+\item \textbf{Dry air supply} Set to 60 PSI
 \item \textbf{HV power supply} Keithly model 2410, connected to the same computer through a USB to RS232 adapter
 \end{itemize}
 
@@ -41,62 +41,57 @@ The electrical acceptance test of final modules is a critical step in manufactur
 \section{Procedure}
 
 \begin{enumerate}
-    \item Handle modules only with proper protection: ESD wristband, gloves, face mask.
-    \item Place the modules on the cold box. For this, do:
+    \item Handle modules only with proper protection: ESD wristband.
+    \item Check encapsulated drawer in the dry air cabinet for any module that need to be tested.
+    \item Take up to four and place them in the cold box. For this, do:
     \begin{itemize}
         \item Open the lid. The sample area needs to be clean, no dust or dirt visible on cold plate.
-        \item Place up to four modules on their carriers using the positioner pins.
+        \item Place the modules using the positioning pins.
         \item Connect the cable to the adapter cards on the cold box.
         \item Close the lid. Make sure the cables lie flat and the lid makes a good seal.
     \end{itemize}    
-    \item Turn the cold box on and select Fulltest program. %and run the Fulltest program. The temperature need to be stable, within .3$^\circ$C , before running module tests.
-    \item Make sure the supplies are running:
-     \begin{itemize}
-        \item Chilled water: The chiller needs to be turned on and set to a temperature of 20$^\circ$C. Water flow set to 3\,gal/min. Chiller needs to be turned on only with the cold box on, Fulltest program running and after the flushing part of the program is finished.
-        \item Dry air: The main valve needs to be open and set to 60\,psi.
-        \item All DTB connected to power and LED indicate they are powered.
-    \end{itemize}
-    \item Run the \emph{full test} using elComandante 
+    \item Turn on 	the cold box. %and run the Fulltest program. The temperature need to be stable, within .3$^\circ$C , before running module tests.
+    \item Power on the needed DTBs.
+    \item Go to FPIXUtils directory and do.
     \begin{itemize}
-		\item Generate the configuration files (if already have them move to the item)\\
-		Go to data subfolder and do:\\
-		\$\$ $cd pxar/data$
-		\$\$ ../main/mkConfig -d defaultparameters -t tbmtype -r roctype -m -f -p \textsc{\char13}s/hubId 31/hubId 15 	\textsc{\char13}/
-		\item Go to $elComandante/config$ folder and open elComandante.ini and elComandante.conf files. The first file contains information about the modules that are going to be tested and which DTB are going to be used. Set the module name with its corresponding DTB. Also make sure keithley and coldbox are set to True and lowvoltage and xray are set to false. At the end of the file include a test description according to the test you are about to do. Finally, indicated which tests are going to be done. For a complete full qualification of the module the tests are: IV\at 17,Pretest{\at}17$>$\{Fulltest\at 17\}\\
-		The second file has information about paths and ports. Set the jumo client and the Keithley client to the correct ports, ttyUSB0 and ttyUSB1, watch for any changes (Normally a port's name changes every time you plug a different device in a port). Make sure each DTB has the correct name and specify the path for the configuration files(as set above). Finally check the directory where the pxar executable is, normally it is at pxar/bin/pXar.
-		\item Run elComandante
-		\begin{itemize}
-			\item \$\$ cd ../elComandante
-			\item \$\$ python el\_comandante.py
-			\item Wait until the test is complete and watch for any errors. Results are stored in $../elComandante/DATA/name$
-		\end{itemize}
-	\end{itemize}
-   
-   \item Removing the modules
+    		\item {$\$ $\it{python startShift.py}}
+    		\item Enter your information and modules information.
+    		\item {$\$ $\it{python prepareTest.py Pretest False}}
+    		\item When the prestest is finished do: {$\$ $\it{python checkTest.py Pretest}}
+    		\item Check all graphs. If modules need to be removed do so and run {$\$ $\it{startShift.py}} again with the new module info
+    		\item If no modules were removed do: {$\$ $\it{python prepareTest.py FPIXTest False}}
+    		\item When flushing part is over, start the chiller and set it to 20$^\circ$C. Water flow set to 3\,gal/min.
+    		\item Go to elcomandante subfolder and run {$\$ $\it{python el\_comandante.py}}
+    		\item When test is finished turn off the chiller and run {$\$ $\it{python checkTest.py FPIXTest}}
+    \end{itemize}
+    \item Removing the modules
    \begin{itemize}
-   		\item Once the tests is finished press Next button on the cold box for the program to finish.
-   		\item Turn off the chiller. Open the lid and remove the modules.
-   		\item Prepare them for the next step, shipping is they are in good condition, storing for further testing is something went wrong.
-	\end{itemize} 
-	 \item Run MoReWeb Software
-    \begin{itemize}
-    		\item Change directory to $/home/silpix5/MoReWeb/Analize$, then do:
-    		\item \$\$ Python Controller.py
-    		\item Results will be stored in $/home/silpix5/Results$ and a overview page is created in $/home/silpix5/Overview$
-    		\item If you need or want to change the directory where results are stored, you must edit Paths.cfg file in $/home/silpix5/MoReWeb/Analize/Configuration$
-   \end{itemize}  	
-    \item Document any findings. Upload the following results to the Purdue database:
-    \begin{itemize}
-    		\item A jpg or png file with the pixel alive result and a second one with the Bump Bonding results.
-    		\item Add any other information you considered relevant.
-    \end{itemize}
+   		\item Open the lid and remove the modules.
+   		\item Prepare them for the next step, shipping them to KU if they are in good condition, shipping them to FermiLab if further testing (debugging) is needed.
+	\end{itemize}
 \end{enumerate}
 
 %------------------------------------------------------------------
 \section{Documentation}
-If a module passes the tests, a status update in the database needed. Go to ``MAIN MENU''$\rightarrow$``Part List'' and select your module. Upload any pictures as needed and add comments as needed.
-
-No need to make an entry in the Elog if nothing special happened.
-
+\begin{enumerate}
+	\item Purdue database
+		\begin{itemize}
+			\item Go to Purdue database, assembly status and click on encapsulated or wirebonded
+			\item Click on the module name and read the sensor attached to it
+			\item Then, go to main menu. Measurement submit, select the wafer, the last three digit in the sensor number
+			\item Fill out the information (choose the log file containing the IV results) and submit
+			\item Go to main menu, Moreweb data submit, and select the .tar file corresponding to the module
+		\end{itemize}
+	\item Github
+		\begin{itemize}
+			\item In a terminal window do: git clone https://github.com/jking79/UNL-KU-FPIX-Module-Testing
+			\item Copy the entire folder of the modules to this folder, then do:
+			\item git add .
+			\item git commit -m "comments"
+			\item git push origin master				 
+		\end{itemize}
+	\item If a module is encapsulated promote it to tested in purdue database.
+	\item Go to Full test summary, then manual update, check full test at 17$^\circ$C, and set next testing step to x-ray.
+\end{enumerate}
 \end{document}
 
